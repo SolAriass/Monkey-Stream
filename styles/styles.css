@@ -211,11 +211,11 @@ QUE EL DE INICIAR SESIÓN*/
     justify-content: center;
     margin: auto;
     width: auto;
+    gap: 5px;
 }
 
 .boton-recuperar-contraseña{
     padding: 5px;
-    margin: 5px;
     margin-top: 0;
     width: 150px;
     border: none;
@@ -755,7 +755,12 @@ hr{
     margin-bottom: 25px;
 }
 
-
+.error{
+    color: rgb(172, 6, 47);
+    font-weight: 500;
+    font-size: 13px;
+    padding-top: 2px;
+}
 
 
 

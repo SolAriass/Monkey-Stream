@@ -15,17 +15,19 @@
     <section class="section_rc">
         <h2 class="titulo-recuperar-contra">Recuperar Contraseña</h2>
 
-        <form action="#" method="post" class="recuperar_contraseña">
+        <form action="../index.html" method="get" class="recuperar_contraseña" id="form_recCon">
         <label for="email" class="label">E-mail</label>
 
         <input
             type="email"
             id="email"
             name="email"
-            required
             placeholder="Ingrese email"
             class="input"
         />
+        <p id="errorEmail" class="error">
+
+        </p>
 
         <br />
 
@@ -35,25 +37,34 @@
             type="text"
             name="nombre"
             id="nombre"
-            required
             placeholder="Ingrese nombre de usuario"
             class="input"
         />
-        </form>
-        <br />
+
+        <p id="errorUsuario" class="error">
+
+        </p>
 
         <!-- nuevamente los agregamos en un div para poder trabajar con ellos de una
         mejor forma-->
+        <br />
         <div class="botones">
-        <button class="boton-recuperar-contraseña">
-            <a href="../index.html" class="link-rec-contra">Enviar email</a>
-        </button>
+        <input type="submit" value="Enviar email" class="boton-recuperar-contraseña">
+           
         <button class="boton-recuperar-contraseña">
             <a href="../index.html" class="link-rec-contra">Cancelar</a>
         </button>
 
         </div>
+        </form>
+        
+
+       
+       
     </section>
     </main>
+
+    <script src="../scripts/scriptRecContra.js"></script>
+
 </body>
 </html>

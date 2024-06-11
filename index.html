@@ -20,17 +20,19 @@
         para poder trabajar de mejor forma con el-->
         <main>
             <section class="contenedor_formulario">
-                <form action="#" method="post" enctype="application/x-www-form-urlencoded" class="formulario">
+                <form action="./pages/vistaPrincipal.html" method="get" class="formulario" id="form_iniciosesion">
                     <label for="nombre" class="label">Nombre de usuario</label>
                     <input
                         type="text"
                         id="nombre"
                         name="nombre"
                         placeholder="Nombre de usuario"
-                        required
                         autocomplete="off"
                         class="input"
                     />
+                    <p id="errorNombre" class="error">
+
+                    </p>
                 
                     <br>
                 
@@ -42,9 +44,11 @@
                         id="contraseña"
                         placeholder="Constraseña"
                         autocomplete="off"
-                        required
                         class="input"
                     />
+                    <p id="errorContaseña" class="error">
+
+                    </p>
                 
                     <br>
                     
@@ -52,9 +56,7 @@
                     se nos ocurrio de este modo ya que la unica forma de ir a 
                     otra página es con un link, en forma de boton ya que si fuera
                     un input no nos dejaria poner el link dentro-->
-                    <button class="boton-principal">
-                        <a href="pages/vistaPrincipal.html" id="link_inicio">Inciar sesion</a>
-                    </button>
+                    <input type="submit" value="Iniciar sesion" class="boton-principal" id="enviarForm">
 
                     <br>
                     </form>
@@ -72,5 +74,7 @@
                     >Registrarse</a>
             </section>
         </main>
+
+        <script src="scripts/script.js"></script>
     </body>
 </html>
