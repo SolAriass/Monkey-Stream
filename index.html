@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximumscale=1">
+        <meta charset="UTF-8" />
+        <title>Monkey Stream</title>
+        <link rel="stylesheet" href="./styles/styles.css">
+        <link rel="icon" href="assets/images/icono monkey stream.svg">
+    </head>
+    <body>
+
+        <!--el encabezado de nuestro inicio de sesion, con su titulo y un fondo-->
+        <header class="encabezado">
+            <h1 class="titulo_encabezado">Monkey Stream</h1>
+            <p class="subtitulo_encabezado">Las mejores series y peliculas</p>
+        </header>
+
+
+        <!--el cuerpo, donde se encuentra el formulado separado en una seccion
+        para poder trabajar de mejor forma con el-->
+        <main>
+            <section class="contenedor_formulario">
+                <form action="#" method="post" enctype="application/x-www-form-urlencoded" class="formulario">
+                    <label for="nombre" class="label">Nombre de usuario</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Nombre de usuario"
+                        required
+                        autocomplete="off"
+                        class="input"
+                    />
+                
+                    <br>
+                
+                    <label for="contraseña" class="label">Contraseña</label>
+                
+                    <input
+                        type="password"
+                        name="contraseña"
+                        id="contraseña"
+                        placeholder="Constraseña"
+                        autocomplete="off"
+                        required
+                        class="input"
+                    />
+                
+                    <br>
+                    
+                    <!--el boton que envia los datos y nos lleva al inicio
+                    se nos ocurrio de este modo ya que la unica forma de ir a 
+                    otra página es con un link, en forma de boton ya que si fuera
+                    un input no nos dejaria poner el link dentro-->
+                    <button class="boton-principal">
+                        <a href="pages/vistaPrincipal.html" id="link_inicio">Inciar sesion</a>
+                    </button>
+
+                    <br>
+                    </form>
+
+                    <!--Link de referencia a las demas paginas, en este caso
+                    recuperar contraseña y registrarse-->
+                    <a
+                    href="./pages/recuperarC.html"
+                    id="recuperar"
+                    class="vinculo"
+                    >Recuperar contraseña</a>
+
+                    <a href="./pages/registrarse.html" 
+                    class="vinculo"
+                    >Registrarse</a>
+            </section>
+        </main>
+    </body>
+</html>

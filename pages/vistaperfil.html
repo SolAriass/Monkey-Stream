@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="icon" href="../assets/images/icono monkey stream.svg">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="nav">
+                <a href="vistaPrincipal.html">Home</a>
+            </li>
+            <li class="nav">
+                <a href="Series.html">Series</a>
+            </li>
+            <li class="nav">
+                <a href="Peliculas.html">Peliculas</a>
+            </li>
+            <li class="nav">
+                <a href="vistaperfil.html">Perfil</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <main>
+        <section class="registro_principal seccion-perfil">
+
+            <!-- un articulo creado para poder trabajar en una caja solo a la imagen y al nombre del usuario-->
+        <article class="articulo-perfil">
+            <img src="../assets/images/imagen perfil persona.jpg" title="persona" alt="perfil de persona" id="imagen_perfil">
+            <p>Jime :> </p>
+        </article>
+        
+        <br><br>
+
+        <article class="registro-1 registro-datos">
+        <!-- dividimos en dos partes la formulario para poder separarlos en dos cajas 
+        y poder trabajarlos mejor con css-->
+        <br>
+
+            <form action="#" method="post"> 
+
+                <label for="email" class="label">E-mail</label>
+                <br>
+                <p id="email">jimegomez123@gmail.com</p>
+                <br>
+
+                <label for="contraseña" class="label">Contraseña</label>
+                <br>
+                <p id="contraseña">·················</p>
+        
+                <br>
+
+                <label for="contraseña" class="label">Nueva Contraseña</label>
+                <br>
+                <input type="password" name="contraseña" id="contraseña" placeholder="Constraseña" autocomplete="on" class="input_registro">
+        
+                <br>
+
+                <label for="repetida" class="label">Repetir contraseña</label>
+                <br>
+                <input type="password" name="repetida" id="repetida" placeholder="Repetir contraseña" autocomplete="on" class="input_registro">
+        
+                <br>
+                        
+        </article>
+        
+        <article class="registro-2 registro-datos-2">
+            <p class="metodo">Metodos de pago</p> 
+            
+            <!-- agregamos en cajas a nuestros metodos de pago para poder trabajar la distancia entre ellos
+            de forma mas comoda con css, lo mismo con los checkbox para ordenarlos -->
+            <div class="t-credito tarjeta">
+            <input type="radio" value="Tarjeta de credito" id="tarjetaDeCredito" name="metodo-de-pago" class="input-pago">
+            <label for="tarjetaDeCredito" class="label">Tarjeta de credito</label>
+            <br>
+            <input id="numero" type="number" name="numero" placeholder="Numero de tarjeta" class="input-pago input-tj">
+            <input id="codigo" type="number" name="codigo" placeholder="XXX" class="input-pago input-tj">
+            </div>
+            
+
+            
+            <div class="c-pago pago">
+            <input type="radio" value="Cupon de pago" id="cuponDePago" name="metodo-de-pago" class="input-pago">
+            <label for="cuponDePago" class="label">Cupon de pago</label>
+            
+            <div class="checkbox">
+            <input id="pago-facil" type="checkbox" name="pagofacil" value="pagofacil"><label for="pago-facil" class="check">Pago facil</label>
+            <!-- Tiene el atributo checked asignado por eso, aparece seleccionado cuando carga la pagina -->
+            <input id="rapipago" type="checkbox" name="rapiPago" value="rapiPago" checked> <label for="rapipago" class="check">Rapipago</label> 
+            </div>
+
+            </div>
+            
+
+
+            <div class="t-bancaria banco">
+            <input type="radio" value="Transferencia bancaria" id="transferencia" name="metodo-de-pago" class="input-pago">
+            <label for="transferencia" class="label">Transferencia bancaria</label>
+            <p class="cbu">CBU: 333334545677745</p>       
+            </div>
+
+
+
+</form>
+
+<!-- los metimos en un div a ambos botones para acomodarlos juntos , luego le dabamos sus estilos por separado-->
+
+<div class="botones-registrarse">
+    <button class="boton-registrarse"><a href="../index.html" class="link"> Confirmar</a>
+    </button>
+    <button class="boton-registrarse"><a href="../index.html" class="link">Cancelar</a></button>
+    </div>
+    
+        </article>
+        </section>
+    </main>
+
+
+</body>  
+
+</html>

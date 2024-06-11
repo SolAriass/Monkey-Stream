@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registrarse</title>
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="icon" href="../assets/images/icono monkey stream.svg">
+</head>
+<body>
+
+
+        <main>
+                <h2 class="titulo-registro">Registrarse</h2>
+                <section class="registro_principal">
+
+                <article class="registro-1">
+                        
+                <!-- usamos el mismo metodo aca y en el perfil, para poder trabajar cada parte del formulario por separado
+                y se nos haga mas comodo de ordenar a la hora de dar estilos-->
+                        <form action="#" method="post" class="formulario-registro">
+                        
+                        
+                        <label for="text" class="label">Nombre</label>
+                        <br>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Nombre de usuario" autocomplete="on" class="input_registro">
+
+                        <br>
+
+                        <label for="apellido" class="label">Apellido</label>
+                        <br>
+                        <input type="text" name="apellido" id="apellido" required placeholder="Ingrese apellido" autocomplete="on" class="input_registro">
+                
+                        <br>
+
+                        <label for="email" class="label">E-mail</label>
+                        <br>
+                        <input type="email" id="email" name="email" placeholder="Ingrese email" required autocomplete="on" class="input_registro">
+
+                        <br>
+
+                        <label for="nombre" class="label">Nombre de usuario</label>
+                        <br>
+                        <input type="text" name="nombre" id="nombre" required placeholder="Nombre de usuario" autocomplete="on" class="input_registro">
+                
+                        <br>
+
+                        <label for="contraseña" class="label">Contraseña</label>
+                        <br>
+                        <input type="password" name="contraseña" required id="contraseña" placeholder="Constraseña" autocomplete="on" class="input_registro">
+                
+                        <br>
+
+                        <label for="repetida" class="label">Repetir contraseña</label>
+                        <br>
+                        <input type="password" name="repetida" required id="repetida" placeholder="Repetir contraseña" autocomplete="on" class="input_registro">
+                
+                        <br>
+
+                </article>
+
+                <article class="registro-2">
+                
+                        <p class="metodo">Metodos de pago</p> 
+                        
+                        <div class="t-credito">
+                        <input type="radio" value="Tarjeta de credito" required id="tarjetaDeCredito" name="metodo-de-pago" class="input-pago">
+                        <label for="tarjetaDeCredito" class="label">Tarjeta de credito</label>
+                        <br>
+                        <input id="numero" type="number" required name="numero" placeholder="Numero de tarjeta" class="input-pago">
+                        <input id="codigo" type="number"  required name="codigo" placeholder="XXX" class="input-pago">
+                        </div>
+                        
+        
+                        
+                        <div class="c-pago">
+                        <input type="radio" value="Cupon de pago" id="cuponDePago" required name="metodo-de-pago" class="input-pago">
+                        <label for="cuponDePago" class="label">Cupon de pago</label>
+                        
+                        <div class="checkbox">
+                        <input id="pago-facil" type="checkbox" name="pagofacil" required value="pagofacil"><label for="pago-facil" class="check">Pago facil</label>
+                        <!-- Tiene el atributo checked asignado por eso, aparece seleccionado cuando carga la pagina -->
+                        <input id="rapipago" type="checkbox" required name="rapiPago" value="rapiPago" checked> <label for="rapipago" class="check">Rapipago</label> 
+                        </div>
+
+                        </div>
+                        
+                        <div class="t-bancaria">
+                        <input type="radio" value="Transferencia bancaria" required id="transferencia" name="metodo-de-pago" class="input-pago">
+                        <label for="transferencia" class="label">Transferencia bancaria</label>
+                        <p class="cbu">CBU: 333334545677745</p>       
+                        </div>
+
+                        <div class="botones-registrarse">
+
+
+                        <button class="boton-registrarse"><a href="../index.html" class="link">Confirmar</a>
+                        </button>
+                        <button class="boton-registrarse"><a href="../index.html" class="link">Cancelar</a></button>
+                        </div>
+                        
+                        </form>
+                </article>
+        </section>
+        </main>
+</body>
+</html>

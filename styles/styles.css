@@ -1,0 +1,777 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bree+Serif&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #edbdc9;
+    font-family: 'Montserrat';
+}
+
+/* Primera vista - inicio sesion */
+
+/* ESTILO DE NUESTRO ENCABEZADO */
+
+.encabezado{
+    background-image: url("/assets/images/imagen.encabezado.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    background-position: center;
+    box-shadow: 0px 0px 15px 20px #fff3;
+    padding: 60px;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TITULO Y SUBTITULO DE NUESTRO ENCABEZADO*/
+
+.titulo_encabezado{
+    color: #111d;
+    font-size: 38px;
+    font-family: 'Bree Serif';
+}
+
+.subtitulo_encabezado{
+    color: #1119;
+    font-weight: 600;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+/* ESTILO A NUESTRO FORMULARIO DE INICIO DE SESIÓN */
+
+.contenedor_formulario{
+    background-color: #fff3;
+    border: 1px solid #fff6;
+    width: 300px;
+    margin: auto;
+    position: relative;
+    top: 13em;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+
+.label{
+    padding-bottom: 3px;
+    font-weight: 500;
+}
+
+.input{
+    padding: 6px;
+    border-radius: 3px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #000d;
+}
+
+.input::placeholder{
+    color: #0005;
+}
+
+/* BOTONES Y ENLACES DE NUESTRO INICIO DE SESIÓN*/
+
+.boton-principal{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 150px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(240, 93, 142);
+    border: none;
+    border-radius: 5px;
+}
+
+.boton-principal #link_inicio{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+
+}
+
+.boton-principal:hover{
+    box-shadow: 0px 0px 15px rgb(255, 98, 124);
+}
+
+#link_inicio:hover{
+    text-decoration: underline;
+}
+
+.vinculo{
+    display: block;
+    text-align: center;
+    color: black;
+
+}
+
+
+
+
+@media screen and (max-width:500px){
+
+    .titulo_encabezado{
+        font-size: 2.1em;
+        text-align: center;
+    }
+    .subtitulo_encabezado{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .formulario label{
+        font-size: 1.2em;
+        padding-bottom: 10px;
+    }
+    .formulario .input::placeholder{
+        font-size: 1.2em;
+    }
+
+    .boton-principal{
+        width: 15em;
+
+    }
+
+    .boton-principal a{
+        font-size: 1.2em;
+    }
+
+    .vinculo{
+        font-size: 1.1em;
+    }
+}
+
+
+
+
+/************************************************************/
+
+/* Segunda vista - Recuperar Contraseña */
+
+/* SECCION DE RECUPERAR CONTRASEÑA */
+.section_rc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 180px;
+}
+
+/* TITULO DEL RECUPERAR CONTRASEÑA */
+.titulo-recuperar-contra{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* ESTILO A NUESTRO FORMULARIO DEL RECUPERAR CONTRASEÑA */
+.recuperar_contraseña{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    width: 300px;
+}
+
+.recuperar_contraseña::placeholder{
+    color: #0005;
+}
+
+/* ESTRUCTURA LABEL - INPUT Y PLACEHOLDER USAMOS LA MISMA
+QUE EL DE INICIAR SESIÓN*/
+
+/* ESTILO DE LOS BOTONES DE RECUPERAR CONTRASEÑA*/
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    width: auto;
+}
+
+.boton-recuperar-contraseña{
+    padding: 5px;
+    margin: 5px;
+    margin-top: 0;
+    width: 150px;
+    border: none;
+    background-color: rgb(240, 93, 142);
+    border-radius: 5px;
+}
+
+.boton-recuperar-contraseña:hover{
+    box-shadow: 0px 0px 15px rgb(255, 98, 124);
+}
+
+.link-rec-contra{
+    text-decoration: none;
+    color: black;
+}
+
+.link-rec-contra:hover{
+    text-decoration: underline;
+}
+
+
+/************************************************************/
+
+/* Tercer vista - Registrarse */
+
+/* ESTILO DE NUESTRO FORMULARIO DE REGISTRO*/
+
+.registro_principal{
+    border: 2px solid #fff4;
+    background: #fff3;
+    border-radius: 10px;
+    width: 700px;
+    padding: 30px 0px 30px 0px;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+/* ESTILO TITULO DEL REGISTRO*/
+
+.titulo-registro{
+    text-align: center;
+    margin: 15px;
+    color: #000d;
+}
+
+/* ESTILOS DE PRIMERA COLUMNA DE REGISTROS */
+
+.registro-1{
+    margin-right: 30px;
+}
+
+.input_registro{
+    margin-top: 5px;
+    border: none;
+    border-radius: 3px;
+    background-color: transparent;
+    border-bottom: 1px solid #000d;
+    width: 200px;
+    padding: 6px;
+    margin-bottom: 20px;
+}
+
+.input_registro::placeholder{
+    color: #0005;
+}
+
+/* ESTILOS DE SEGUNDA COLUMNA DE REGISTROS */
+
+.registro-2{
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+}
+
+#codigo{
+    margin: 0;
+    width: 45px;
+}
+
+.input-pago{
+    margin-top: 8px;
+    border: none;
+    padding: 6px;
+    border-radius: 3px;
+    background-color: transparent;
+    border-bottom: 1px solid #000d;
+}
+
+.input-pago::placeholder{
+    color: #0005;
+}
+
+.metodo{
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.checkbox{
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.cbu{
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.check{
+    padding-left: 9px;
+    padding-right: 12px;
+}
+
+.t-bancaria, .c-pago{
+    margin-top: 40px;
+}
+
+/*BOTONES DE REGISTRO*/
+
+.botones-registrarse{
+    display: flex;
+    margin-top: 30px;
+}
+
+.boton-registrarse{
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    background-color: rgb(240, 93, 142);
+}
+
+.boton-registrarse:hover{
+    box-shadow: 0px 0px 15px rgb(255, 98, 124);
+}
+
+.boton-registrarse a{
+    text-decoration: none;
+    color: black;
+}
+
+.boton-registrarse a:hover{
+    text-decoration: underline;
+}
+
+
+/************************************************************/
+/* Cuarta vista - Vista principal */
+
+/*MENU DE LA VISTA PRINCIPAL*/
+nav{
+    background-color: rgb(240, 93, 142);
+    box-shadow: 0px 0px 30px rgb(240, 93, 142);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    padding: 15px;
+}
+
+li a{
+    padding: 10px;
+}
+
+li a:hover{
+    background-color: #fff3;
+    border-radius: 5px;
+}
+
+
+/* BARRA PARA BUSCAR PELICULAS POR CATEGORIA O NOMBRE EN VISTA PRINCIPAL*/
+.barras{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.barras input, .barras select{
+
+    background-color: transparent;
+    border: 1px solid #0004;
+    border-radius: 5px;
+    width: 150px;
+    font-size: 15px;
+    padding: 5px 18px 5px 18px;
+}
+
+select option{
+    background-color: #edbdc9;
+    font-weight: bold;
+    
+}
+
+.barras input{
+    width: 200px;
+    padding-left: 30px;
+}
+
+.barras label{
+    padding-right: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.barras input::placeholder{
+    color: #0004;
+}
+
+/* ARMADO DE ICONO DENTRO DE INPUT */
+
+.box-svg{
+    position: relative;
+}
+
+.svg{
+    position: absolute;
+    width: 15px;
+    top: 7px;
+    left: 10px;
+}
+
+/*OPCIONES DE PELICULAS DE LA VISTA PRINCIPAL*/
+.imagenes{
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: 25px;
+    justify-content: center;
+}
+
+.imagen_pelicula img{
+    width: 170px;
+    background-size: contain;
+    height: 240px;
+    border-radius: 10px;
+
+}
+
+/************************************************************/
+/* Quinta Vista - Perfil */
+
+/*BARRA DE NAVEGACION REUTILIZADA DE VISTA PRINCIPAL*/
+
+/*ARMADO DE LA SECCION CODIGO REUTILIZADO DEL REGISTRAR*/
+
+.seccion-perfil{
+    width: 800px;
+    position: relative;
+    top: 6em;
+}
+
+/*IMAGEN DEL PERFIL*/
+
+.articulo-perfil p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.articulo-perfil{
+    margin-right: 30px;
+}
+
+
+#imagen_perfil{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/*REGISTRO DE DATOS DEL PERFIL*/
+
+.registro-datos input{
+    margin-bottom: 30px;
+}
+
+.registro-datos p{
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.registro-datos-2 div{
+    margin: 9px;
+
+}
+
+@media screen and (max-width:500px){
+
+    .seccion-perfil{
+        flex-direction: column;
+        font-size: 2.3em;
+        padding: 40px;
+        margin: 0;
+
+    }
+
+
+    nav{
+        height: 5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+    }
+
+    .input_registro, .input-tj{
+        width: 40em;
+        height: 4em;
+        margin-top: 20px;
+        border-width: 3px;
+    }
+
+    .input_registro::placeholder, .input-tj::placeholder{
+        font-size: 2.5em;
+    }
+
+    .articulo-perfil{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #codigo{
+        width: 90px;
+    }
+
+    #tarjetaDeCredito, #cuponDePago, #transferencia{
+        width: 30px;
+        height: 30px;
+    }
+
+    #rapipago, #pago-facil{
+        width: 24px;
+        height: 24px;
+    }
+
+    .registro-1, .registro-2, .articulo-perfil{
+        width: 100%;
+        margin: 0;
+    }
+
+    .boton-registrarse{
+        height: 70px;
+    }
+
+    .boton-registrarse a{
+        font-size: 2.3em;
+    }
+
+
+}
+
+
+
+
+
+
+/************************************************************/
+/* Sexta y Septima Vista - Detalle pelicula y serie */
+
+
+/*ARMADO DE IFRAME Y BOTON DE LAS VISTAS DE PELICULA Y SERIE*/
+.seccion-vista{
+    margin: 40px;
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+}
+
+.iframe-boton{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.iframe-boton button{
+    width: 500px;
+    margin-top: 10px;
+}
+
+iframe{
+    border: none;
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
+}
+
+/*ARMADO DE TEMPORADA Y CAPITULOS DE VISTA DE SERIES*/
+
+.seleccionador{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+}
+
+.seleccionador select{
+    margin-right: 25px;
+    margin-left: 5px;
+    width: 150px;
+    border: 1px solid #0003;
+    border-radius: 10px;
+    background-color: transparent;
+    outline: none;
+}
+
+
+.seleccionador label{
+    font-weight: bold;
+}
+
+/*ARMADO DE LA DATA DE PELICULAS Y SERIES*/
+
+
+
+.data-pelicula_serie p{
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+span{
+    font-weight: 800;
+}
+
+p a{
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+p a:hover{
+    text-decoration: underline;
+}
+
+.descripcion{
+    margin-top: 20px;
+    width: 600px;
+
+}
+
+.actores{
+    width: 550px;
+}
+
+hr{
+    margin: 20px;
+    border: 1px solid #0003;
+}
+
+/*IMAGENES SIMILARES DE PELICULAS Y SERIES*/
+
+.imagenes-sim img{
+    width:170px;
+    height: 240px;
+    border-radius: 10px;
+}
+
+.titulo-similares{
+    margin: 20px;
+    text-align: center;
+}
+
+.imagenes-sim{
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    justify-content: center;
+    gap: 25px;
+}
+
+/*BOTON PARA INICIAR SERIE O PELICULA*/
+
+.comenzar{
+    background-color: palevioletred;
+    border: none;
+    border-radius: 10px;
+    padding: 6px;
+
+}
+
+.comenzar a{
+    color: #000;
+    text-decoration: none;
+}
+
+.comenzar:hover{
+    box-shadow: 0px 0px 10px palevioletred;
+}
+
+.comenzar a:hover{
+    text-decoration: underline;
+}
+
+/*DECORACION BARRA DE NAVEGACION*/
+
+.nav a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+/*ORDEN DE CADA DIVISION TANTO PELICULAS COMO SERIES*/
+
+.titulo-peliculas, .titulo-serie{
+    margin-left: 10px;
+}
+
+
+.imagenes-peliculas, .imagenes-series{
+    display: flex;
+    flex-direction: column;
+}
+
+.box-1, .box-2, .box-3, .box-4, .box-5{
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    justify-content: space-evenly;
+    grid-column-gap: 10px;
+    margin: 10px;
+    margin-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

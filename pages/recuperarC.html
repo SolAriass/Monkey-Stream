@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="icon" href="../assets/images/icono monkey stream.svg">
+</head>
+<body>
+
+    <!-- creamos el cuerpo de nuestro formulario en una sola seccion, se nos hizo comodo 
+    para ordenar todo ya que era poca información-->
+    <main>
+    <section class="section_rc">
+        <h2 class="titulo-recuperar-contra">Recuperar Contraseña</h2>
+
+        <form action="#" method="post" class="recuperar_contraseña">
+        <label for="email" class="label">E-mail</label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Ingrese email"
+            class="input"
+        />
+
+        <br />
+
+        <label for="nombre" class="label">Nombre de usuario</label>
+
+        <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            required
+            placeholder="Ingrese nombre de usuario"
+            class="input"
+        />
+        </form>
+        <br />
+
+        <!-- nuevamente los agregamos en un div para poder trabajar con ellos de una
+        mejor forma-->
+        <div class="botones">
+        <button class="boton-recuperar-contraseña">
+            <a href="../index.html" class="link-rec-contra">Enviar email</a>
+        </button>
+        <button class="boton-recuperar-contraseña">
+            <a href="../index.html" class="link-rec-contra">Cancelar</a>
+        </button>
+
+        </div>
+    </section>
+    </main>
+</body>
+</html>
