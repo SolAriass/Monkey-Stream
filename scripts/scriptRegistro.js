@@ -1,10 +1,54 @@
-let formulario = document.querySelector("#form_registro");
+let formulario = document.getElementById("form_registro");
 
-formulario.addEventListener("submit", function(e){
-    e.preventDefault();
-    validacionFormularioRegistro();
 
-});
+let boton = document.querySelector("#boton_registro");
+
+
+function validarBoton(){
+
+    let botonDeshabilitado = false;
+
+    if(formulario.nombre.value == "" || formulario.apellido.value == "" || formulario.email.value == "" 
+        || formulario.usuario.value == ""){
+            botonDeshabilitado = true;
+        }
+
+        if(formulario.contraseña.value == ""){
+            botonDeshabilitado = true;
+        }
+
+        if(formulario.repetida.value == ""){
+            botonDeshabilitado = true;
+        }
+
+
+        let opciones = document.getElementsByName("metodo-de-pago")
+
+        let seleccionado = false;
+    
+        for (let i = 0; i < opciones.length; i++) {
+            if (opciones[i].checked) {
+                seleccionado = true;
+                break;  // Si se encuentra seleccionado, no es necesario seguir buscando
+            }
+        }
+
+        if(!seleccionado){
+            botonDeshabilitado = true;
+        }
+
+        if(botonDeshabilitado){
+            boton.disabled = true;
+        }else{
+             boton.disabled = false;
+        }
+
+}
+
+formulario.addEventListener("input", validarBoton);
+
+
+
 
 function validacionFormularioRegistro(){
 
@@ -14,6 +58,9 @@ function validacionFormularioRegistro(){
     let usuario = document.getElementById("usuario").value;
     let password = document.getElementById("contraseña").value;
     let repetida = document.getElementById("repetida").value;
+    let codigo = document.getElementById("codigo").value;
+    let nroTarjeta = document.getElementById("numero").value
+    let opcionesPago = document.getElementsByName("metodo-de-pago");
 
     let error = false;
    
@@ -23,6 +70,11 @@ function validacionFormularioRegistro(){
     document.getElementById("errorUsuario").innerHTML = "";
     document.getElementById("errorContraseña").innerHTML = "";
     document.getElementById("errorContraseñaRep").innerHTML = "";
+    document.getElementById("errorCodigo").innerHTML = "";
+    document.getElementById("errorOpcion").innerHTML = "";
+    document.getElementById("errorSeleccion").innerHTML = "";
+    
+
 
     let expresion1 = /^[a-zA-Z]+$/;
 
@@ -63,9 +115,93 @@ function validacionFormularioRegistro(){
         document.getElementById("errorContraseñaRep").innerHTML = "<p> La contraseña debe coincidir con la contraseña original </p>"
     }
 
+  
+
+    let seleccionado = false;
+    for(i in opcionesPago){
+        if(opcionesPago[i].checked){
+            seleccionado = true;
+        }
+    }
+
+    if(!seleccionado){
+        error = true;
+        document.getElementById("errorOpcion").innerHTML += "<p> MARCA UNA OPCION </p>"
+    }
+
+    if(opcionesPago[0].checked){
+
+        let expresionNroT = /^\d{16,19}$/;
+
+        if(!expresionNroT.test(nroTarjeta)){
+         error = true;
+        }else if(expresionNroT.test(nroTarjeta)){
+     
+             //array de numeros
+             let digitos = nroTarjeta.split('')
+     
+             //suma de todos menos el ultimo
+             let sumaDigitosAnteriores = 0;
+             for (let i = 0; i < digitos.length - 1; i++) {
+             sumaDigitosAnteriores += digitos[i];
+         }
+     
+         //verifico si la suma es par / impar
+         let sumaEsPar = sumaDigitosAnteriores % 2 === 0;
+     
+         let ultimoDigito = digitos[digitos.length - 1];
+     
+         //verificar si el ultimo numero es par / impar
+         let ultimoDigitoEsPar = ultimoDigito % 2 === 0;
+     
+         if ((sumaEsPar && !ultimoDigitoEsPar) || (!sumaEsPar && ultimoDigitoEsPar)) {
+             error = true;
+              document.getElementById("errorCodigo").innerHTML = "<p> tarjeta invalida </p>"
+         }
+     
+     }
+     
+         let expresionCodigo = /^\d{3}$/;
+     
+         if(!expresionCodigo.test(codigo) || codigo == "" || codigo === '000'){
+             error = true;
+             document.getElementById("errorCodigo").innerHTML += "<p> Codigo incorrecto </p>"
+         }
+
+
+
+    }else if(opcionesPago[1].checked){
+
+        let pagoFacil = document.getElementById("pago-facil")
+        let rapipago = document.getElementById("rapipago")
+
+        if(!pagoFacil.checked && !rapipago.checked){
+            error = true;
+            document.getElementById("errorSeleccion").innerHTML = "<p> PONGA UNA SOLA OPCION </p>"
+
+        }else if(pagoFacil.checked && rapipago.checked){
+            error = true;
+            document.getElementById("errorSeleccion").innerHTML = "<p> TE DIJE QUE SOLO PONGAS UNA </p>"  
+        }
+
+    }
+
+    
+
 
     if(!error){
+        localStorage.setItem('nombreUsuario', usuario);
+        localStorage.setItem('contraseña', password);
+        localStorage.setItem('email', email);
         formulario.submit();
+        alert("Registro Exitoso :D")
     }
 
 }
+
+
+formulario.addEventListener("submit", function(e){
+    e.preventDefault();
+    validacionFormularioRegistro();
+
+});

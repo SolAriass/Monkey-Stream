@@ -12,26 +12,36 @@ function validacionFormulario(){
     let nombre = document.getElementById("nombre").value;
     let password = document.getElementById("contraseña").value;
 
-    let errorNombre = false;
-    let errorPass = false;
+    let error = false;
 
     document.getElementById("errorNombre").innerHTML = "";
     document.getElementById("errorContaseña").innerHTML = "";
 
+    if(localStorage.getItem('nombreUsuario') === null && localStorage.getItem('contraseña') === null){ 
+        document.getElementById("errorContaseña").innerHTML = "<p> Usted no esta registrado </p>";
+    }
+    
+
     if(nombre == ""){
-        errorNombre = true;
+        error= true;
         document.getElementById("errorNombre").innerHTML = "<p> No puede dejar el nombre vacio </p>"
     }
 
     if(password == ""){
-        errorPass = true;
+        error = true;
         document.getElementById("errorContaseña").innerHTML = "<p> No puede dejar la contraseña vacia </p>"
     }
 
-    if(!errorNombre && !errorPass){
+    if(!error && nombre === localStorage.getItem('nombreUsuario') && password === localStorage.getItem('contraseña')){
         formulario.submit();
     }
 
+
+/*
+    if(!errorNombre && !errorPass){
+        formulario.submit();
+    }
+*/
 
 }
 

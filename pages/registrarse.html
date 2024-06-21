@@ -85,37 +85,47 @@
                         <p class="metodo">Metodos de pago</p> 
                         
                         <div class="t-credito">
-                        <input type="radio" value="Tarjeta de credito" id="tarjetaDeCredito" name="metodo-de-pago" class="input-pago">
+                        <input type="radio" value="TarjetaDeCredito" id="tarjetaDeCredito" name="metodo-de-pago" class="input-pago">
                         <label for="tarjetaDeCredito" class="label">Tarjeta de credito</label>
                         <br>
                         <input id="numero" type="number" name="numero" placeholder="Numero de tarjeta" class="input-pago">
                         <input id="codigo" type="number" name="codigo" placeholder="XXX" class="input-pago">
-                        </div>
-                        
+                        <p id="errorCodigo" class="error"> 
+
+                        </p>
+                
+                </div>
         
                         
                         <div class="c-pago">
-                        <input type="radio" value="Cupon de pago" id="cuponDePago" name="metodo-de-pago" class="input-pago">
+                        <input type="radio" value="CuponDePago" id="cuponDePago" name="metodo-de-pago" class="input-pago">
                         <label for="cuponDePago" class="label">Cupon de pago</label>
                         
                         <div class="checkbox">
                         <input id="pago-facil" type="checkbox" name="pagofacil" value="pagofacil"><label for="pago-facil" class="check">Pago facil</label>
                         <!-- Tiene el atributo checked asignado por eso, aparece seleccionado cuando carga la pagina -->
-                        <input id="rapipago" type="checkbox" name="rapiPago" value="rapiPago" checked> <label for="rapipago" class="check">Rapipago</label> 
-                        </div>
+                        <input id="rapipago" type="checkbox" name="rapiPago" value="rapiPago"> <label for="rapipago" class="check">Rapipago</label> 
+                        <p id="errorSeleccion" class="error"> 
+
+                        </p>
+                </div>
 
                         </div>
                         
                         <div class="t-bancaria">
-                        <input type="radio" value="Transferencia bancaria" id="transferencia" name="metodo-de-pago" class="input-pago">
+                        <input type="radio" value="TransferenciaBancaria" id="transferencia" name="metodo-de-pago" class="input-pago">
                         <label for="transferencia" class="label">Transferencia bancaria</label>
-                        <p class="cbu">CBU: 333334545677745</p>       
+                        <p class="cbu">CBU: 21839094111000189775</p>       
                         </div>
+                        <p id="errorOpcion" class="error"> 
+
+                        </p>
+
 
                         <div class="botones-registrarse">
 
 
-                        <input type="submit" class="boton-registrarse" value="Confirmar">
+                        <input type="submit" disabled class="boton-registrarse" value="Confirmar" id="boton_registro">
                         
                         <button class="boton-registrarse"><a href="../index.html" class="link">Cancelar</a></button>
                         </div>
