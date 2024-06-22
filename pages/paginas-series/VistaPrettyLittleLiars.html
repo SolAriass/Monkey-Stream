@@ -1,123 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pretty Little Liars</title>
-    <link rel="stylesheet" href="../../styles/styles.css">
-    <link rel="icon" href="../../assets/images/icono monkey stream.svg">
-</head>
-<body>
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <link rel="icon" href="../../assets/images/icono monkey stream.svg" />
+    <link rel="stylesheet" href="../../styles/slick-theme.css">
+    <link rel="stylesheet" href="../../styles/slick.css">
+  </head>
+  <body>
     <nav>
-        <ul>
-            <li class="nav">
-                <a href="../vistaPrincipal.html">Home</a>
-            </li>
-            <li class="nav">
-                <a href="../Series.html">Series</a>
-            </li>
-            <li class="nav">
-                <a href="../Peliculas.html">Peliculas</a>
-            </li>
-            <li class="nav">
-                <a href="../vistaperfil.html">Perfil</a>
-            </li>
-        </ul>
+      <ul>
+        <li class="nav">
+          <a href="../vistaPrincipal.html">Home</a>
+        </li>
+        <li class="nav">
+          <a href="../Series.html">Series</a>
+        </li>
+        <li class="nav">
+          <a href="../Peliculas.html">Peliculas</a>
+        </li>
+        <li class="nav">
+          <a href="../vistaperfil.html">Perfil</a>
+        </li>
+      </ul>
     </nav>
 
     <main>
-        <section class="seccion-vista">
+      <section class="seccion-vista">
+        <article class="iframe-boton">
+          <iframe
+            src="https://www.youtube.com/embed/nwHvFNQG5UE?si=Tt7uj3UsEo2qTA4F"
+          ></iframe>
+          <button class="comenzar">
+            <a
+              href="https://youtu.be/nwHvFNQG5UE?si=Tt7uj3UsEo2qTA4F"
+              target="_blank"
+              >Comenzar</a
+            >
+          </button>
+        </article>
 
-            <article class="iframe-boton">
-            <iframe src="https://www.youtube.com/embed/nwHvFNQG5UE?si=Tt7uj3UsEo2qTA4F"></iframe>
-            <button class="comenzar"><a href="https://youtu.be/nwHvFNQG5UE?si=Tt7uj3UsEo2qTA4F" target="_blank">Comenzar</a></button>
-            </article>
-            
-            <article class="data-pelicula_serie">
-            <p><span>Título: </span> Pretty Little Liars.</p>
-            
-            <article class="seleccionador">
+        <article class="data-pelicula_serie">
+          <p><span>Título: </span> Pretty Little Liars.</p>
 
-                <label for="temporadas" class="label">Temporadas: </label>
-                <select id="temporadas" name="categorias" class="ingreso_de_datos">
-                    <option value="seleccionar_categoria" selected>Seleccionar</option>
-                    <option value="temp_1">Temporada 1</option>
-                    <option value="temp_2">Temporada 2</option>
-                    <option value="temp_3">Temporada 3</option>
-                    <option value="temp_4">Temporada 4</option>
-                    <option value="temp_5">Temporada 5</option>
-                    <option value="temp_6">Temporada 6</option>
-                    <option value="temp_7">Temporada 7</option>
-                </select>
-    
-                <label for="capitulos" class="label">Capitulos: </label>
-                <select id="capitulos" name="categorias" class="ingreso_de_datos">
-                    <option value="seleccionar_categoria" selected>Seleccionar</option>
-                    <option value="cap_1">Capitulo 1</option>
-                    <option value="cap_2">Capitulo 2</option>
-                    <option value="cap_3">Capitulo 3</option>
-                    <option value="cap_4">Capitulo 4</option>
-                    <option value="cap_5">Capitulo 5</option>
-                    <option value="cap_6">Capitulo 6</option>
-                    <option value="cap_7">Capitulo 7</option>
-                    <option value="cap_8">Capitulo 8</option>
-                    <option value="cap_9">Capitulo 9</option>
-                    <option value="cap_10">Capitulo 10</option>
-                    <option value="cap_11">Capitulo 11</option>
-                    <option value="cap_12">Capitulo 12</option>
-                    <option value="cap_13">Capitulo 13</option>
-                    <option value="cap_14">Capitulo 14</option>
-                    <option value="cap_15">Capitulo 15</option>
-                    <option value="cap_16">Capitulo 16</option>
-                    <option value="cap_17">Capitulo 17</option>
-                    <option value="cap_18">Capitulo 18</option>
-                    <option value="cap_19">Capitulo 19</option>
-                    <option value="cap_20">Capitulo 20</option>
-                    <option value="cap_21">Capitulo 21</option>
-                    <option value="cap_22">Capitulo 22</option>
-                </select>
-    
-                </article>
+          <article class="seleccionador">
+            <label for="temporadas" class="label">Temporadas: </label>
+            <select id="temporadas" name="categorias" class="ingreso_de_datos">
+              <option value="seleccionar_categoria" selected>
+                Seleccionar
+              </option>
+              <option value="temp_1">Temporada 1</option>
+              <option value="temp_2">Temporada 2</option>
+              <option value="temp_3">Temporada 3</option>
+              <option value="temp_4">Temporada 4</option>
+              <option value="temp_5">Temporada 5</option>
+              <option value="temp_6">Temporada 6</option>
+              <option value="temp_7">Temporada 7</option>
+            </select>
 
+            <label for="capitulos" class="label">Capitulos: </label>
+            <select id="capitulos" name="categorias" class="ingreso_de_datos">
+              <option value="seleccionar_categoria" selected>
+                Seleccionar
+              </option>
+              <option value="cap_1">Capitulo 1</option>
+              <option value="cap_2">Capitulo 2</option>
+              <option value="cap_3">Capitulo 3</option>
+              <option value="cap_4">Capitulo 4</option>
+              <option value="cap_5">Capitulo 5</option>
+              <option value="cap_6">Capitulo 6</option>
+              <option value="cap_7">Capitulo 7</option>
+              <option value="cap_8">Capitulo 8</option>
+              <option value="cap_9">Capitulo 9</option>
+              <option value="cap_10">Capitulo 10</option>
+              <option value="cap_11">Capitulo 11</option>
+              <option value="cap_12">Capitulo 12</option>
+              <option value="cap_13">Capitulo 13</option>
+              <option value="cap_14">Capitulo 14</option>
+              <option value="cap_15">Capitulo 15</option>
+              <option value="cap_16">Capitulo 16</option>
+              <option value="cap_17">Capitulo 17</option>
+              <option value="cap_18">Capitulo 18</option>
+              <option value="cap_19">Capitulo 19</option>
+              <option value="cap_20">Capitulo 20</option>
+              <option value="cap_21">Capitulo 21</option>
+              <option value="cap_22">Capitulo 22</option>
+            </select>
+          </article>
 
-            <p><span>Género: </span>Drama / Suspenso.</p>
-            <div class="actores">
-                <p><span>Actores: </span> 
-            <a href="https://es.wikipedia.org/wiki/Troian_Bellisario">Troian Bellisario</a>,
-            <a href="https://es.wikipedia.org/wiki/Ashley_Benson">Ashley Benson</a>,
-            <a href="https://es.wikipedia.org/wiki/Lucy_Hale">Lucy Hale</a>,
-            <a href="https://es.wikipedia.org/wiki/Shay_Mitchell">Shay Mitchell</a>,
-            <a href="https://es.wikipedia.org/wiki/Sasha_Pieterse">Sasha Pieterse</a>.
-            </p>  
-            </div>
+          <p><span>Género: </span>Drama / Suspenso.</p>
+          <div class="actores">
+            <p>
+              <span>Actores: </span>
+              <a href="https://es.wikipedia.org/wiki/Troian_Bellisario"
+                >Troian Bellisario</a
+              >,
+              <a href="https://es.wikipedia.org/wiki/Ashley_Benson"
+                >Ashley Benson</a
+              >,
+              <a href="https://es.wikipedia.org/wiki/Lucy_Hale">Lucy Hale</a>,
+              <a href="https://es.wikipedia.org/wiki/Shay_Mitchell"
+                >Shay Mitchell</a
+              >,
+              <a href="https://es.wikipedia.org/wiki/Sasha_Pieterse"
+                >Sasha Pieterse</a
+              >.
+            </p>
+          </div>
 
-            <div class="descripcion">
-                <p>Historia de 4 amigas, que comienzan a recibir amenazas de alguien llamado "A" 
-                    un año después del supuesto asesinato y desaparición de su amiga Alison.</p>
-            </div>
-            
-            </article>
+          <div class="descripcion">
+            <p>
+              Historia de 4 amigas, que comienzan a recibir amenazas de alguien
+              llamado "A" un año después del supuesto asesinato y desaparición
+              de su amiga Alison.
+            </p>
+          </div>
+        </article>
+      </section>
 
-        </section>
+      <hr />
 
-        <hr>
-
-        <section class="secion-peliculas_series-similares">
-            <h2 class="titulo-similares">Similares</h2>
-            <article class="imagenes-sim">
-                <img src="../../assets/images/series similares/PRETTY LITTLE LIARS/SERIE RAVENSWOOD (PRETTY LITTLE LIARS).jpg" alt="Serie Ravenswood">
-                <img src="../../assets/images/series similares/PRETTY LITTLE LIARS/SERIE BIG LITTLE LIES (PRETTY LITTLE LIARS).jpg" alt="Serie Big Little Lies">
-                <img src="../../assets/images/series similares/PRETTY LITTLE LIARS/SERIE THE VAMPIRE DIARIES (PRETTY LITTLE LIARS).jpg" alt="Serie The Vampire Diaries">
-                <img src="../../assets/images/series similares/PRETTY LITTLE LIARS/SERIE CRUEL SUMMER (PRETTY LITTLE LIARS).jpg" alt="Serie Cruel Summer">
-                <img src="../../assets/images/series similares/PRETTY LITTLE LIARS/SERIE ALGUIEN ESTA MINTIENDO (PRETTY LITTLE LIARS).jpg" alt="Serie Alguien está mintiendo">
-                <img src="../../assets/images/series similares/PRETTY LITTLE LIARS/SERIE SE LO QUE HICIERON EL VERANO PASADO (PRETTY LITTLE LIARS).jpg" alt="Serie Se Lo Que Hicieron El Verano Pasado">
-            </article>
-        </section>
-
-
-
+      <section class="secion-peliculas_series-similares">
+        <h2 class="titulo-similares">Similares</h2>
+        <article class="imagenes-sim">
+          <div>
+            <img
+              src="../../assets/images/series similares/PRETTY LITTLE LIARS/SERIE RAVENSWOOD (PRETTY LITTLE LIARS).jpg"
+              alt="Serie Ravenswood"
+            />
+          </div>
+          <div>
+            <img
+              src="../../assets/images/series similares/PRETTY LITTLE LIARS/SERIE BIG LITTLE LIES (PRETTY LITTLE LIARS).jpg"
+              alt="Serie Big Little Lies"
+            />
+          </div>
+          <div>
+            <img
+              src="../../assets/images/series similares/PRETTY LITTLE LIARS/SERIE THE VAMPIRE DIARIES (PRETTY LITTLE LIARS).jpg"
+              alt="Serie The Vampire Diaries"
+            />
+          </div>
+          <div>
+            <img
+              src="../../assets/images/series similares/PRETTY LITTLE LIARS/SERIE CRUEL SUMMER (PRETTY LITTLE LIARS).jpg"
+              alt="Serie Cruel Summer"
+            />
+          </div>
+          <div>
+            <img
+              src="../../assets/images/series similares/PRETTY LITTLE LIARS/SERIE ALGUIEN ESTA MINTIENDO (PRETTY LITTLE LIARS).jpg"
+              alt="Serie Alguien está mintiendo"
+            />
+          </div>
+          <div>
+            <img
+              src="../../assets/images/series similares/PRETTY LITTLE LIARS/SERIE SE LO QUE HICIERON EL VERANO PASADO (PRETTY LITTLE LIARS).jpg"
+              alt="Serie Se Lo Que Hicieron El Verano Pasado"
+            />
+          </div>
+        </article>
+      </section>
     </main>
 
-
-</body>
+    <script src="../../scripts/jquery-3.5.1.min.js"></script>
+    <script src="../../scripts/slick.min.js"></script>
+    <script src="../../scripts/scriptCarrousel.js"></script>
+  </body>
 </html>
