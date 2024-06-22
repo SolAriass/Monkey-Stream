@@ -14,124 +14,132 @@
                 <h2 class="titulo-registro">Registrarse</h2>
                 <section class="registro_principal">
 
-                <article class="registro-1">
+                
                         
                 <!-- usamos el mismo metodo aca y en el perfil, para poder trabajar cada parte del formulario por separado
                 y se nos haga mas comodo de ordenar a la hora de dar estilos-->
-                        <form action="../index.html" method="get" class="formulario-registro" id="form_registro">
+                <form action="../index.html" method="get" class="formulario-registro" id="form_registro">
+                 <section class="cajita-registro">
+                        <article class="registro-1">           
                         
-                        
-                        <label for="text" class="label">Nombre</label>
-                        <br>
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre de usuario" autocomplete="on" class="input_registro">
-                        <div id="errorNombre" class="error">
-
-                        </div>
-
-
-                        <br>
-
-                        <label for="apellido" class="label">Apellido</label>
-                        <br>
-                        <input type="text" name="apellido" id="apellido" placeholder="Ingrese apellido" autocomplete="on" class="input_registro">
-                        <p id="errorApellido" class="error">
-
-                        </p>
-
-
-                        <br>
-
-                        <label for="email" class="label">E-mail</label>
-                        <br>
-                        <input type="email" id="email" name="email" placeholder="Ingrese email" autocomplete="on" class="input_registro">
-                        <p id="errorEmail" class="error">
-
-                        </p>
-
-                        <br>
-
-                        <label for="usuario" class="label">Nombre de usuario</label>
-                        <br>
-                        <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" autocomplete="on" class="input_registro">
-                        <p id="errorUsuario" class="error">
-
-                        </p>
-
-                        <br>
-
-                        <label for="contraseña" class="label">Contraseña</label>
-                        <br>
-                        <input type="password" name="contraseña" id="contraseña" placeholder="Constraseña" autocomplete="on" class="input_registro">
-                        <p id="errorContraseña" class="error">
-
-                        </p>
-
-                        <br>
-
-                        <label for="repetida" class="label">Repetir contraseña</label>
-                        <br>
-                        <input type="password" name="repetida" id="repetida" placeholder="Repetir contraseña" autocomplete="on" class="input_registro">
-                        <p id="errorContraseñaRep" class="error"> 
-
-                        </p>
-
-
-                        <br>
-
-                </article>
-
-                <article class="registro-2">
-                
-                        <p class="metodo">Metodos de pago</p> 
-                        
-                        <div class="t-credito">
-                        <input type="radio" value="TarjetaDeCredito" id="tarjetaDeCredito" name="metodo-de-pago" class="input-pago">
-                        <label for="tarjetaDeCredito" class="label">Tarjeta de credito</label>
-                        <br>
-                        <input id="numero" type="number" name="numero" placeholder="Numero de tarjeta" class="input-pago">
-                        <input id="codigo" type="number" name="codigo" placeholder="XXX" class="input-pago">
-                        <p id="errorCodigo" class="error"> 
-
-                        </p>
-                
-                </div>
+                                <label for="text" class="label">Nombre</label>
+                                <br>
+                                <input type="text" id="nombre" name="nombre" placeholder="Nombre de usuario" autocomplete="on" class="input_registro">
+                                <div id="errorNombre" class="error">
         
+                                </div>
+        
+        
+                                <br>
+        
+                                <label for="apellido" class="label">Apellido</label>
+                                <br>
+                                <input type="text" name="apellido" id="apellido" placeholder="Ingrese apellido" autocomplete="on" class="input_registro">
+                                <p id="errorApellido" class="error">
+        
+                                </p>
+        
+        
+                                <br>
+        
+                                <label for="email" class="label">E-mail</label>
+                                <br>
+                                <input type="email" id="email" name="email" placeholder="Ingrese email" autocomplete="on" class="input_registro">
+                                <p id="errorEmail" class="error">
+        
+                                </p>
+        
+                                <br>
+        
+                                <label for="usuario" class="label">Nombre de usuario</label>
+                                <br>
+                                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" autocomplete="on" class="input_registro">
+                                <p id="errorUsuario" class="error">
+        
+                                </p>
+        
+                                <br>
+        
+                                <label for="contraseña" class="label">Contraseña</label>
+                                <br>
+                                <input type="password" name="contraseña" id="contraseña" placeholder="Constraseña" autocomplete="on" class="input_registro">
+                                <p id="errorContraseña" class="error">
+        
+                                </p>
+        
+                                <br>
+        
+                                <label for="repetida" class="label">Repetir contraseña</label>
+                                <br>
+                                <input type="password" name="repetida" id="repetida" placeholder="Repetir contraseña" autocomplete="on" class="input_registro">
+                                <p id="errorContraseñaRep" class="error"> 
+        
+                                </p>
+        
+        
+                                <br>
+        
+                        </article>
+        
+                        <article class="registro-2">
                         
-                        <div class="c-pago">
-                        <input type="radio" value="CuponDePago" id="cuponDePago" name="metodo-de-pago" class="input-pago">
-                        <label for="cuponDePago" class="label">Cupon de pago</label>
+                                <p class="metodo">Metodos de pago</p> 
+                                
+                                <div class="t-credito">
+                                <input type="radio" value="TarjetaDeCredito" id="tarjetaDeCredito" name="metodo-de-pago" class="input-pago">
+                                <label for="tarjetaDeCredito" class="label">Tarjeta de credito</label>
+                                <br>
+                                <input id="numero" type="number" name="numero" placeholder="Numero de tarjeta" class="input-pago">
+                                <input id="codigo" type="number" name="codigo" placeholder="XXX" class="input-pago">
+                                <p id="errorCodigo" class="error"> 
+        
+                                </p>
                         
-                        <div class="checkbox">
-                        <input id="pago-facil" type="checkbox" name="pagofacil" value="pagofacil"><label for="pago-facil" class="check">Pago facil</label>
-                        <!-- Tiene el atributo checked asignado por eso, aparece seleccionado cuando carga la pagina -->
-                        <input id="rapipago" type="checkbox" name="rapiPago" value="rapiPago"> <label for="rapipago" class="check">Rapipago</label> 
-                        <p id="errorSeleccion" class="error"> 
-
-                        </p>
-                </div>
-
                         </div>
-                        
-                        <div class="t-bancaria">
-                        <input type="radio" value="TransferenciaBancaria" id="transferencia" name="metodo-de-pago" class="input-pago">
-                        <label for="transferencia" class="label">Transferencia bancaria</label>
-                        <p class="cbu">CBU: 21839094111000189775</p>       
+                
+                                
+                                <div class="c-pago">
+                                <input type="radio" value="CuponDePago" id="cuponDePago" name="metodo-de-pago" class="input-pago">
+                                <label for="cuponDePago" class="label">Cupon de pago</label>
+                                
+                                <div class="checkbox">
+                                <input id="pago-facil" type="checkbox" name="pagofacil" value="pagofacil"><label for="pago-facil" class="check">Pago facil</label>
+                                <!-- Tiene el atributo checked asignado por eso, aparece seleccionado cuando carga la pagina -->
+                                <input id="rapipago" type="checkbox" name="rapiPago" value="rapiPago"> <label for="rapipago" class="check">Rapipago</label> 
+                                <p id="errorSeleccion" class="error"> 
+        
+                                </p>
                         </div>
-                        <p id="errorOpcion" class="error"> 
+        
+                                </div>
+                                
+                                <div class="t-bancaria">
+                                <input type="radio" value="TransferenciaBancaria" id="transferencia" name="metodo-de-pago" class="input-pago">
+                                <label for="transferencia" class="label">Transferencia bancaria</label>
+                                <p class="cbu">CBU: 21839094111000189775</p>       
+                                </div>
+                                <p id="errorOpcion" class="error"> 
+        
+                                </p>
+        
+        
+                                <div class="botones-registrarse">
+        
+        
+                                <input type="submit" disabled class="boton-registrarse" value="Confirmar" id="boton_registro">
+                                
+                                <button class="boton-registrarse"><a href="../index.html" class="link">Cancelar</a></button>
+                                </div>
+                                
+                             </article>   
 
-                        </p>
 
 
-                        <div class="botones-registrarse">
 
-
-                        <input type="submit" disabled class="boton-registrarse" value="Confirmar" id="boton_registro">
-                        
-                        <button class="boton-registrarse"><a href="../index.html" class="link">Cancelar</a></button>
-                        </div>
-                        
+                        </section>       
+                   
                         </form>
-                </article>
+                
         </section>
         </main>
         <script src="../scripts/scriptRegistro.js"></script>

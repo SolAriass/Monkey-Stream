@@ -27,8 +27,8 @@
 
 
 
-    <main>
-        <section class="registro_principal seccion-perfil">
+    <main class="foto-y-form">
+        <section class="seccion-perfil">
 
             <!-- un articulo creado para poder trabajar en una caja solo a la imagen y al nombre del usuario-->
         <article class="articulo-perfil">
@@ -38,13 +38,15 @@
         
         <br><br>
 
-        <article class="registro-1 registro-datos">
+    </section>
         <!-- dividimos en dos partes la formulario para poder separarlos en dos cajas 
         y poder trabajarlos mejor con css-->
         <br>
 
+    <section class="seccion-del-form">
             <form action="#" method="post"> 
-
+        <div class="cajita-registro cajita-perfil">
+            <article class="registro-1 registro-datos">
                 <label for="email" class="label">E-mail</label>
                 <br>
                 <p id="email">jimegomez123@gmail.com</p>
@@ -105,20 +107,21 @@
             <p class="cbu">CBU: 333334545677745</p>       
             </div>
 
+            <div class="botones-registrarse">
+                <button class="boton-registrarse"><a href="../index.html" class="link"> Confirmar</a>
+                </button>
+                <button class="boton-registrarse"><a href="../index.html" class="link">Cancelar</a></button>
+                </div>
+    
 
-
+        </article>
+    </div>
 </form>
-
+    </section>
 <!-- los metimos en un div a ambos botones para acomodarlos juntos , luego le dabamos sus estilos por separado-->
 
-<div class="botones-registrarse">
-    <button class="boton-registrarse"><a href="../index.html" class="link"> Confirmar</a>
-    </button>
-    <button class="boton-registrarse"><a href="../index.html" class="link">Cancelar</a></button>
-    </div>
-    
-        </article>
-        </section>
+
+        
     </main>
 
 

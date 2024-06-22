@@ -243,20 +243,20 @@ QUE EL DE INICIAR SESIÓN*/
 
 /* ESTILO DE NUESTRO FORMULARIO DE REGISTRO*/
 
-.registro_principal{
+.cajita-registro{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin: auto;
+    justify-content: center;
     border: 2px solid #fff4;
     background: #fff3;
-    border-radius: 10px;
-    width: 700px;
-    padding: 30px 0px 30px 0px;
-    display: flex;
-    margin-top: 50px;
-    flex-direction: row;
-    box-sizing: border-box;
-    justify-content: center;
     align-items: center;
-    margin: auto;
+    border-radius: 10px;
+    padding: 30px 0px 30px 0px;
 }
+
 
 /* ESTILO TITULO DEL REGISTRO*/
 
@@ -280,7 +280,7 @@ QUE EL DE INICIAR SESIÓN*/
     border-bottom: 1px solid #000d;
     width: 200px;
     padding: 6px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .input_registro::placeholder{
@@ -479,11 +479,28 @@ select option{
 
 /*ARMADO DE LA SECCION CODIGO REUTILIZADO DEL REGISTRAR*/
 
-.seccion-perfil{
-    width: 800px;
-    position: relative;
-    top: 6em;
+
+.foto-y-form{
+    display: flex;
+    margin: auto;
+    margin-top: 80px;
+    border: 2px solid #fff4;
+    background: #fff3;
+    border-radius: 10px;
+    width: 70%;
+    padding: 30px;
+    align-items: center;
+    box-sizing: border-box;
+
 }
+
+.cajita-perfil{
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+
+}
+
 
 /*IMAGEN DEL PERFIL*/
 
@@ -496,10 +513,9 @@ select option{
     margin-right: 30px;
 }
 
-
 #imagen_perfil{
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
 }
 
@@ -510,13 +526,12 @@ select option{
 }
 
 .registro-datos p{
-    margin-top: 8px;
     margin-bottom: 20px;
 }
 
 .registro-datos-2 div{
-    margin: 9px;
-
+    margin: 5px;
+    width: 300px;
 }
 
 @media screen and (max-width:500px){

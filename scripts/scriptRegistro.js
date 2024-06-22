@@ -8,21 +8,7 @@ function validarBoton(){
 
     let botonDeshabilitado = false;
 
-    if(formulario.nombre.value == "" || formulario.apellido.value == "" || formulario.email.value == "" 
-        || formulario.usuario.value == ""){
-            botonDeshabilitado = true;
-        }
-
-        if(formulario.contraseña.value == ""){
-            botonDeshabilitado = true;
-        }
-
-        if(formulario.repetida.value == ""){
-            botonDeshabilitado = true;
-        }
-
-
-        let opciones = document.getElementsByName("metodo-de-pago")
+    let opciones = document.getElementsByName("metodo-de-pago")
 
         let seleccionado = false;
     
@@ -33,7 +19,8 @@ function validarBoton(){
             }
         }
 
-        if(!seleccionado){
+    if(formulario.nombre.value === "" || formulario.apellido.value === "" || formulario.email.value === "" 
+        || formulario.usuario.value === "" || formulario.contraseña.value === "" || formulario.repetida.value === "" || !seleccionado){
             botonDeshabilitado = true;
         }
 
@@ -46,6 +33,14 @@ function validarBoton(){
 }
 
 formulario.addEventListener("input", validarBoton);
+
+
+
+formulario.addEventListener("submit", function(e){
+    e.preventDefault();
+    validacionFormularioRegistro();
+
+});
 
 
 
@@ -112,7 +107,7 @@ function validacionFormularioRegistro(){
 
     if(repetida != password || repetida == ""){
         error = true;
-        document.getElementById("errorContraseñaRep").innerHTML = "<p> La contraseña debe coincidir con la contraseña original </p>"
+        document.getElementById("errorContraseñaRep").innerHTML = "<p> Debe coincidir con la contraseña original </p>"
     }
 
   
@@ -135,7 +130,8 @@ function validacionFormularioRegistro(){
 
         if(!expresionNroT.test(nroTarjeta)){
          error = true;
-        }else if(expresionNroT.test(nroTarjeta)){
+         document.getElementById("errorCodigo").innerHTML = "<p> Tarjeta invalida </p>"
+        }else if(expresionNroT.test(nroTarjeta) && nroTarjeta.length > 0){
      
              //array de numeros
              let digitos = nroTarjeta.split('')
@@ -156,7 +152,7 @@ function validacionFormularioRegistro(){
      
          if ((sumaEsPar && !ultimoDigitoEsPar) || (!sumaEsPar && ultimoDigitoEsPar)) {
              error = true;
-              document.getElementById("errorCodigo").innerHTML = "<p> tarjeta invalida </p>"
+              document.getElementById("errorCodigo").innerHTML = "<p> Tarjeta invalida </p>"
          }
      
      }
@@ -200,8 +196,4 @@ function validacionFormularioRegistro(){
 }
 
 
-formulario.addEventListener("submit", function(e){
-    e.preventDefault();
-    validacionFormularioRegistro();
 
-});
