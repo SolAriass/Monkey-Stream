@@ -254,7 +254,8 @@ QUE EL DE INICIAR SESIÓN*/
     background: #fff3;
     align-items: center;
     border-radius: 10px;
-    padding: 30px 0px 30px 0px;
+    padding: 40px 0px 40px 0px;
+    gap: 4em;
 }
 
 
@@ -268,9 +269,6 @@ QUE EL DE INICIAR SESIÓN*/
 
 /* ESTILOS DE PRIMERA COLUMNA DE REGISTROS */
 
-.registro-1{
-    margin-right: 30px;
-}
 
 .input_registro{
     margin-top: 5px;
@@ -278,7 +276,7 @@ QUE EL DE INICIAR SESIÓN*/
     border-radius: 3px;
     background-color: transparent;
     border-bottom: 1px solid #000d;
-    width: 200px;
+    width: 24em;
     padding: 6px;
     margin-bottom: 5px;
 }
@@ -297,7 +295,7 @@ QUE EL DE INICIAR SESIÓN*/
 
 #codigo{
     margin: 0;
-    width: 45px;
+    width: 4em;
 }
 
 .input-pago{
@@ -487,9 +485,10 @@ select option{
     border: 2px solid #fff4;
     background: #fff3;
     border-radius: 10px;
-    width: 70%;
-    padding: 30px;
+    width: 80%;
+    padding: 2em;
     align-items: center;
+    justify-content: center;
     box-sizing: border-box;
 
 }
@@ -498,7 +497,7 @@ select option{
     background-color: transparent;
     border: none;
     border-radius: 0px;
-
+    gap: 1em;
 }
 
 
@@ -514,8 +513,8 @@ select option{
 }
 
 #imagen_perfil{
-    width: 170px;
-    height: 170px;
+    width: 12em;
+    height: 12em;
     border-radius: 50%;
 }
 
@@ -536,32 +535,35 @@ select option{
 
 @media screen and (max-width:500px){
 
-    .seccion-perfil{
-        flex-direction: column;
-        font-size: 2.3em;
-        padding: 40px;
-        margin: 0;
 
+    .foto-y-form{
+        flex-direction: column;
+
+    }
+
+    .cajita-perfil{
+        flex-direction: column;
+        width: 100%;
     }
 
 
     nav{
-        height: 5em;
+        height: 4em;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 2em;
+        font-size: 1em;
     }
 
     .input_registro, .input-tj{
-        width: 40em;
-        height: 4em;
+        width: 100%;
+        height: 2em;
         margin-top: 20px;
         border-width: 3px;
     }
 
     .input_registro::placeholder, .input-tj::placeholder{
-        font-size: 2.5em;
+        font-size: 1em;
     }
 
     .articulo-perfil{
@@ -571,18 +573,22 @@ select option{
         align-items: center;
     }
 
+    #numero {
+        width: 75%;
+    }
+
     #codigo{
-        width: 90px;
+        width: 23%;
     }
 
     #tarjetaDeCredito, #cuponDePago, #transferencia{
-        width: 30px;
-        height: 30px;
+        width: 1em;
+        height: 1em;
     }
 
     #rapipago, #pago-facil{
-        width: 24px;
-        height: 24px;
+        width: 1em;
+        height: 1em;
     }
 
     .registro-1, .registro-2, .articulo-perfil{
@@ -591,11 +597,9 @@ select option{
     }
 
     .boton-registrarse{
-        height: 70px;
-    }
+        height: 2em;
+        font-size: 1.2em;
 
-    .boton-registrarse a{
-        font-size: 2.3em;
     }
 
 
