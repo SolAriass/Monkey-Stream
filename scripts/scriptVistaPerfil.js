@@ -27,16 +27,16 @@ function validarBotoncitoPerfil(){
             }
         }
 
-
-
-    if(formulario.contraseñaN.value === "" || formulario.contraseñaR.value === "" || !seleccionado){
+    if((formulario.contraseñaN.value === "" || formulario.contraseñaR.value === "")){
         deshabilitado = true;
     }
 
-    if(deshabilitado){
-        boton.disabled = true;
-    }else{
+    
+
+    if(!deshabilitado || seleccionado){
         boton.disabled = false;
+    }else{
+        boton.disabled = true;
     }
 
 
@@ -74,13 +74,13 @@ function validarPerfil(){
 
     let expReg = /^(?=(.*[a-zA-Z]){2,})(?=(.*\d){2,})(?=(.*[!@#$%^&*()\-_=+{};:,<.>]){2,}).{8,}$/;
 
-    if(!expReg.test(contraseñaNueva) || contraseñaNueva == ""){
+    if(!expReg.test(contraseñaNueva)){
         error = true;
         document.getElementById("errorContraseñaN").innerHTML = "<p> La contraseña que ingreso es incorrecta  </p>"
     }
 
 
-    if(contraseñaRepetida != contraseñaNueva || contraseñaRepetida == ""){
+    if(contraseñaRepetida != contraseñaNueva){
         error = true;
         document.getElementById("errorContraseñaR").innerHTML = "<p> Debe coincidir con la contraseña original </p>"
     }
@@ -192,7 +192,7 @@ function validarPerfil(){
 
         }
 
-        
+        formulario.submit();
     
     }
 
