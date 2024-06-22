@@ -33,7 +33,7 @@
             <!-- un articulo creado para poder trabajar en una caja solo a la imagen y al nombre del usuario-->
         <article class="articulo-perfil">
             <img src="../assets/images/imagen perfil persona.jpg" title="persona" alt="perfil de persona" id="imagen_perfil">
-            <p>Jime :> </p>
+            <p id="usuario-perfil"></p>
         </article>
         
         <br><br>
@@ -44,30 +44,37 @@
         <br>
 
     <section class="seccion-del-form">
-            <form action="#" method="post"> 
+            <form action="/pages/vistaPrincipal.html" method="post" id="formulario_perfil"> 
         <div class="cajita-registro cajita-perfil">
             <article class="registro-1 registro-datos">
                 <label for="email" class="label">E-mail</label>
                 <br>
-                <p id="email">jimegomez123@gmail.com</p>
+                <p id="email"></p>
                 <br>
 
                 <label for="contraseña" class="label">Contraseña</label>
                 <br>
-                <p id="contraseña">·················</p>
+                <p id="contraseña"></p>
         
                 <br>
 
                 <label for="contraseña" class="label">Nueva Contraseña</label>
                 <br>
-                <input type="password" name="contraseña" id="contraseña" placeholder="Constraseña" autocomplete="on" class="input_registro">
-        
+                <input type="password" name="contraseña" id="contraseñaN" placeholder="Constraseña" autocomplete="on" class="input_registro">
+                <p class="error" id="errorContraseñaN">
+
+                </p>
+
+
                 <br>
 
                 <label for="repetida" class="label">Repetir contraseña</label>
                 <br>
-                <input type="password" name="repetida" id="repetida" placeholder="Repetir contraseña" autocomplete="on" class="input_registro">
-        
+                <input type="password" name="repetida" id="contraseñaR" placeholder="Repetir contraseña" autocomplete="on" class="input_registro">
+                <p class="error" id="errorContraseñaR">
+
+                </p>
+
                 <br>
                         
         </article>
@@ -78,38 +85,43 @@
             <!-- agregamos en cajas a nuestros metodos de pago para poder trabajar la distancia entre ellos
             de forma mas comoda con css, lo mismo con los checkbox para ordenarlos -->
             <div class="t-credito tarjeta">
-            <input type="radio" value="Tarjeta de credito" id="tarjetaDeCredito" name="metodo-de-pago" class="input-pago">
+            <input type="radio" value="TarjetaDeCredito" id="tarjetaDeCredito" name="metodo-de-pago" class="input-pago">
             <label for="tarjetaDeCredito" class="label">Tarjeta de credito</label>
             <br>
             <input id="numero" type="number" name="numero" placeholder="Numero de tarjeta" class="input-pago input-tj">
             <input id="codigo" type="number" name="codigo" placeholder="XXX" class="input-pago input-tj">
-            </div>
+            <p class="error" id="errorTarjetaYCodigo">
+
+            </p>
+        </div>
             
 
             
             <div class="c-pago pago">
-            <input type="radio" value="Cupon de pago" id="cuponDePago" name="metodo-de-pago" class="input-pago">
+            <input type="radio" value="CuponDePago" id="cuponDePago" name="metodo-de-pago" class="input-pago">
             <label for="cuponDePago" class="label">Cupon de pago</label>
             
             <div class="checkbox">
             <input id="pago-facil" type="checkbox" name="pagofacil" value="pagofacil"><label for="pago-facil" class="check">Pago facil</label>
             <!-- Tiene el atributo checked asignado por eso, aparece seleccionado cuando carga la pagina -->
-            <input id="rapipago" type="checkbox" name="rapiPago" value="rapiPago" checked> <label for="rapipago" class="check">Rapipago</label> 
+            <input id="rapipago" type="checkbox" name="rapiPago" value="rapiPago"> <label for="rapipago" class="check">Rapipago</label> 
             </div>
+            <p class="error" id="errorSeleccion">
+
+            </p>
 
             </div>
             
 
 
             <div class="t-bancaria banco">
-            <input type="radio" value="Transferencia bancaria" id="transferencia" name="metodo-de-pago" class="input-pago">
+            <input type="radio" value="TransferenciaBancaria" id="transferencia" name="metodo-de-pago" class="input-pago">
             <label for="transferencia" class="label">Transferencia bancaria</label>
-            <p class="cbu">CBU: 333334545677745</p>       
+            <p id="cbu" class="cbu">CBU: 333334545677745</p>       
             </div>
 
             <div class="botones-registrarse">
-                <button class="boton-registrarse"><a href="../index.html" class="link"> Confirmar</a>
-                </button>
+                <input type="submit" class="boton-registrarse" value="Confirmar" id="boton-perfil" disabled>
                 <button class="boton-registrarse"><a href="../index.html" class="link">Cancelar</a></button>
                 </div>
     
@@ -124,6 +136,7 @@
         
     </main>
 
+    <script src="/scripts/scriptVistaPerfil.js"></script>
 
 </body>  
 

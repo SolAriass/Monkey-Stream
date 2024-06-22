@@ -622,6 +622,11 @@ select option{
     gap: 20px;
 }
 
+
+.imagenes-sim div img{
+    margin: auto;
+}
+
 .iframe-boton{
     display: flex;
     flex-direction: column;
@@ -667,7 +672,6 @@ iframe{
 /*ARMADO DE LA DATA DE PELICULAS Y SERIES*/
 
 
-
 .data-pelicula_serie p{
     margin-bottom: 10px;
     font-size: 17px;
@@ -689,12 +693,12 @@ p a:hover{
 
 .descripcion{
     margin-top: 20px;
-    width: 600px;
+    width: 80%;
 
 }
 
 .actores{
-    width: 550px;
+    width: 100%;
 }
 
 hr{
@@ -710,6 +714,7 @@ hr{
     border-radius: 10px;
 }
 
+
 .titulo-similares{
     margin: 20px;
     text-align: center;
@@ -720,6 +725,8 @@ hr{
     grid-template-columns: repeat(6, auto);
     justify-content: center;
     gap: 25px;
+    width: 95%;
+    margin: auto;
 }
 
 /*BOTON PARA INICIAR SERIE O PELICULA*/

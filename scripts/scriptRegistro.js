@@ -14,8 +14,7 @@ function validarBoton(){
     
         for (let i = 0; i < opciones.length; i++) {
             if (opciones[i].checked) {
-                seleccionado = true;
-                break;  // Si se encuentra seleccionado, no es necesario seguir buscando
+                seleccionado = true; 
             }
         }
 
