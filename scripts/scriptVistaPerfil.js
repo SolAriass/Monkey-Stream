@@ -71,22 +71,32 @@ function validarPerfil(){
     document.getElementById("errorContraseñaR").innerHTML = "";
     document.getElementById("errorTarjetaYCodigo").innerHTML = "";
     document.getElementById("errorSeleccion").innerHTML = "";
+    document.getElementById("errorOpcion").innerHTML = "";
 
     let expReg = /^(?=(.*[a-zA-Z]){2,})(?=(.*\d){2,})(?=(.*[!@#$%^&*()\-_=+{};:,<.>]){2,}).{8,}$/;
 
-    if(!expReg.test(contraseñaNueva)){
+    if(contraseñaNueva != ""){
+     if(!expReg.test(contraseñaNueva)){
         error = true;
         document.getElementById("errorContraseñaN").innerHTML = "<p> La contraseña que ingreso es incorrecta  </p>"
+    }else{
+        localStorage.setItem('contraseña', contraseñaNueva)
     }
-
 
     if(contraseñaRepetida != contraseñaNueva){
         error = true;
         document.getElementById("errorContraseñaR").innerHTML = "<p> Debe coincidir con la contraseña original </p>"
     }
 
+}
 
-    let opcionSeleccionada;
+   
+
+
+    
+
+
+    let opcionSeleccionada = null;
     let seleccionado = false;
     for(i in opcionesPago){
         if(opcionesPago[i].checked){
@@ -95,10 +105,13 @@ function validarPerfil(){
         }
     }
 
+if(opcionSeleccionada != null){
     if(!seleccionado){
         error = true;
-        document.getElementById("errorOpcion").innerHTML += "<p> MARCA UNA OPCION </p>"
+        document.getElementById("errorOpcion").innerHTML = "<p> MARCA UNA OPCION </p>"
     }
+}
+    
 
     if(opcionesPago[0].checked){
 
