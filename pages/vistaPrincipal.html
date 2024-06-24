@@ -17,10 +17,10 @@
                 <a href="vistaPrincipal.html">Home</a>
             </li>
             <li class="nav">
-                <a href="Series.html">Series</a>
+                <button id="Serie">Series</button>
             </li>
             <li class="nav">
-                <a href="Peliculas.html">Peliculas</a>
+                <button id="Pelicula">Peliculas</button>
             </li>
             <li class="nav">
                 <a href="vistaperfil.html">Perfil</a>
@@ -33,23 +33,30 @@
     mejor las barras de buscar pelicula Y de seleccionar por categoria y separar de las peliculas 
     que cargamos mas abajo, guardadas en una carpeta para mayor prolijidad a la hora de llamar a la
     imagen que corresponde-->
-    <main>
+    <main >
+        <div id="main">
 
-        <section class="barras">
+        </div>
+        <section class="barras" id="barrita">
+           
 
-            <article class="selector_pelis">
+            <article class="selector_pelis" id="seleccionar">
                 <label for="categoria">Categorias</label>
-            <select name="categoria" id="categoria" class="categoria">
-                <option value="1">Romance</option>
-                <option value="2">Terror</option>
-                <option value="3">Comedia</option>
-                <option value="4">Suspenso</option>
-                <option value="5">Accion</option>
+            <select name="categoria" id="genero" class="categoria">
+                    <option value="todos">Todos</option>
+                    <option value="Animación">Animación</option>
+                    <option value="Ciencia ficción">Ciencia Ficción</option>
+                    <option value="Comedia">Comedia</option>
+                    <option value="Crimen">Crimen</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Sobrenatural">Sobrenatural</option>
+                    <option value="Suspenso">Suspenso</option>
+                    <option value="Terror">Terror</option>
             </select>
             </article>
             
             <!-- utilizamos una imagen para agregarla dentro de nuestro input de busqueda -->
-            <div class="box-svg">
+            <div class="box-svg" id="clase">
             <img src="../assets/images/lupa svg.png" alt="lupa" class="svg">
             <input type="text" name="busqueda" id="busqueda" placeholder="Buscar por nombre" class="busqueda">  
             </div>
@@ -57,68 +64,18 @@
 
 
         </section>
+            
+
         <!-- las agregamos a un contenedor para poder trabajar con las imagenes, son un link ya que 
         van a la direccion que le agregamos al presionarlas-->
-        <section class="imagenes">
+        <section class="imagenes" id="cargarPeliSeries">
 
-            <a href="../pages/paginas-peliculas/VistaTheExorcist.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/PELICULA EL EXORCISTA.jpg" alt="Pelicula The Exorcist">
-            </a>
-            <a href="../pages/paginas-peliculas/VistaET.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/PELICULA-ET.jpg" alt="Pelicula E.T">
-            </a>
-            <a href="../pages/paginas-peliculas/VistaSoul.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/PELICULA-SOUL.jpg" alt="Pelicula Soul">
-            </a>
-            <a href="../pages/paginas-peliculas/VistaCoraline.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/PELICULA CORALINE.jpg" alt="Pelicula Coraline">
-            </a>
-            <a href="../pages/paginas-series/VistaElMundoOcultoDeSabrina.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/SERIE-SABRINA.jpg" alt="Serie El Mundo Oculto De Sabrina">
-            </a>
-            <a href="../pages/paginas-peliculas/VistaVertigo.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/PELICULA-VERTIGO.jpg" alt="Pelicula Vértigo">
-            </a>
-            <a href="../pages/paginas-peliculas/VistaLosParanoicos.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/PELICULA LOS PARANOICOS.jpg" alt="Pelicula Los Paranoicos">
-            </a>
-            <a href="../pages/paginas-series/VistaPrettyLittleLiars.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/SERIE PRETTY LITTLE LIARS.jpg" alt="Serie Pretty Little Liars">
-            </a>
-            <a href="../pages/paginas-peliculas/VistaUp.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/PELICULA UP.jpg" alt="Pelicula Up">
-            </a>
-            <a href="../pages/paginas-peliculas/VistaFantasticoSrZorro.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/PELICULA SR ZORRO.jpg" alt="Pelicula Fantastico Sr Zorro">
-            </a>
-            <a href="../pages/paginas-series/VistaThe100.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/SERIE THE 100.jpg" alt="Serie The 100">
-            </a>
-            <a href="../pages/paginas-peliculas/VistaMonsterHouse.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/PELICULA MONSTER HOUSE.jpg" alt="Pelicula Monster House">
-            </a>
-            <a href="../pages/paginas-peliculas/VistaLaPurga.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/PELICULA PURGA.jpg" alt="Pelicula La Purga">
-            </a>
-            <a href="../pages/paginas-series/VistaGossipGirl.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/SERIE GOSSIP GIRL.jpg" alt="Serie Gossip Girl">
-            </a>
-            <a href="../pages/paginas-peliculas/VistaMegan.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/PELICULA MEGAN.jpg" alt="Pelicula Megan">
-            </a>
-            <a href="../pages/paginas-series/VistaPeakyBlinders.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/SERIE PEAKY BLINDERS.jpg" alt="Serie Peaky Blinders">
-            </a>
-            <a href="../pages/paginas-peliculas/VistaCars.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/PELICULA CARS.jpg" alt="Pelicula Cars">
-            </a>
-            <a href="../pages/paginas-peliculas/VistaYDondeEstanLasRubias.html" class="imagen_pelicula">
-                <img src="../assets/images/IMAGENES DE PELICULAS Y SERIES/PELICULA Y DONDE ESTAN LAS RUBIAS.jpg" alt="Pelicula Y Donde Estan Las Rubias">
-            </a>
+            
         </section>
 
 
     </main>
 
+    <script src="../scripts/scriptVistaPrincipal.js"></script>
 </body>
 </html>

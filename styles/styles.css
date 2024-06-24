@@ -376,6 +376,7 @@ nav{
     width: 100%;
     top: 0;
     z-index: 2;
+    box-sizing: border-box;
 }
 
 ul{
@@ -394,10 +395,25 @@ li a{
     padding: 10px;
 }
 
+li button{
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+}
+
+li button:hover{
+    background-color: #fff3;
+    border-radius: 5px;
+   cursor: pointer;
+}
+
 li a:hover{
     background-color: #fff3;
     border-radius: 5px;
 }
+
 
 
 /* BARRA PARA BUSCAR PELICULAS POR CATEGORIA O NOMBRE EN VISTA PRINCIPAL*/
@@ -789,6 +805,22 @@ hr{
 
 
 
+.ocultar{
+    visibility: hidden;
+}
+
+
+
+.formatoNombre{
+    position: absolute;
+    top: 11%;
+    left: 2%;
+    background: linear-gradient(rgb(240, 138, 172), rgb(199, 32, 96));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+}
 
 
 
