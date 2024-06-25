@@ -364,6 +364,119 @@ QUE EL DE INICIAR SESIÓN*/
     text-decoration: underline;
 }
 
+/* MEDIA QUERIES PARA TABLET */
+@media screen and (max-width:1150px) {
+    .cajita-registro{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
+    .boton-registrarse {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .input_registro::placeholder, .input-pago::placeholder{
+        font-size: 16px;
+        text-align: center;
+    }
+    main{
+        font-size: 21px;
+        text-align: center;
+    }
+
+    .checkbox input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+
+    #numero {
+        width: calc(70% - 10px); 
+    }
+
+    .input-pago[type="radio"] {
+        width: 20px;
+        height: 20px;
+    }
+
+    .input_registro, .input-pago {
+        margin: auto;
+        border: none;
+        border-radius: 3px;
+        border-bottom: 3px solid #000d;
+    }
+
+
+}
+
+/* MEDIA QUERIES PARA CELU */
+@media screen and (max-width:580px){
+    .cajita-registro{
+        width: 70%;
+        padding: 10px 0px 10px 0px;
+    }
+
+    main{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .input_registro::placeholder, .input-pago::placeholder{
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .input_registro, .input-pago {
+        width: 100%;
+        height: 50%;
+        max-width: 200px; 
+        margin: auto;
+        border: none;
+        border-radius: 3px;
+        border-bottom: 2px solid #000d;
+    }
+
+    #numero {
+        width: calc(100% - 10px); 
+        max-width: 150px; 
+        margin: auto;
+    }
+
+    #codigo {
+        width: calc(100% - 10px); 
+        max-width: 50px; 
+        margin: auto;
+    }
+
+    .boton-registrarse {
+        width: 35%;
+        padding: 6px;
+        font-size: 12px;
+}
+
+    .botones-registrarse{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .checkbox input[type="checkbox"] {
+        width: 10px;
+        height: 10px;
+}
+    .input-pago[type="radio"] {
+        width: 10px;
+        height: 10px;
+}
+
+    .cbu {
+        width: 70%;
+        text-align: center;
+}
+}    
 
 /************************************************************/
 /* Cuarta vista - Vista principal */
@@ -407,7 +520,7 @@ li a, li button{
 .contenedor_peliseries_nav button:hover{
     background-color: #fff3;
     border-radius: 5px;
-   cursor: pointer;
+    cursor: pointer;
 }
 
 .contenedor_peliseries_nav a:hover, #boton_perfil:hover {
@@ -603,9 +716,8 @@ select option{
     width: 300px;
 }
 
-@media screen and (max-width:500px){
-
-
+/*MEDIA QUERIES DEL PERFIL*/
+@media screen and (max-width:1100px){
     .foto-y-form{
         flex-direction: column;
 
@@ -617,59 +729,17 @@ select option{
     }
 
 
-    .input_registro, .input-tj{
-        width: 100%;
-        height: 2em;
-        margin-top: 20px;
-        border-width: 3px;
-    }
-
-    .input_registro::placeholder, .input-tj::placeholder{
-        font-size: 1em;
-    }
-
     .articulo-perfil{
         margin: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    #numero {
-        width: 75%;
-    }
-
-    #codigo{
-        width: 23%;
-    }
-
-    #tarjetaDeCredito, #cuponDePago, #transferencia{
-        width: 1em;
-        height: 1em;
-    }
-
-    #rapipago, #pago-facil{
-        width: 1em;
-        height: 1em;
-    }
-
-    .registro-1, .registro-2, .articulo-perfil{
         width: 100%;
         margin: 0;
     }
 
-    .boton-registrarse{
-        height: 2em;
-        font-size: 1.2em;
-
-    }
-
 
 }
-
-
-
-
 
 
 /************************************************************/
