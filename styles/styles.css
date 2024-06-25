@@ -22,7 +22,7 @@ body{
 /* ESTILO DE NUESTRO ENCABEZADO */
 
 .encabezado{
-    background-image: url("/assets/images/imagen.encabezado.jpg");
+    background-image: url("../assets/images/imagen.encabezado.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
@@ -383,19 +383,20 @@ ul{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: baseline;
     padding: 0;
 }
 
 li{
     list-style: none;
-    padding: 15px;
+    padding: 8px;
 }
 
-li a{
+li a, li button{
     padding: 10px;
 }
 
-li button{
+.contenedor_peliseries_nav button{
     border: none;
     background-color: transparent;
     font-size: 16px;
@@ -403,18 +404,70 @@ li button{
     font-family: 'Montserrat';
 }
 
-li button:hover{
+.contenedor_peliseries_nav button:hover{
     background-color: #fff3;
     border-radius: 5px;
    cursor: pointer;
 }
 
-li a:hover{
+.contenedor_peliseries_nav a:hover, #boton_perfil:hover {
     background-color: #fff3;
     border-radius: 5px;
 }
 
+.contenedor_peliseries_nav {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 3;
+}
 
+.contenedor_peliseries_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.contenedor_usuario_salir {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: baseline;
+}
+
+#boton_cerrar {
+    background-color: rgba(206, 40, 104, 0.685);
+    border-radius: 8px;
+    margin-right: 2em;
+}
+
+#boton_cerrar:hover {
+    background-color: rgba(189, 20, 84, 0.685);
+}
+
+@media screen and (max-width:600px){
+
+    .contenedor_peliseries_nav {
+        font-size: 14px;
+    }
+
+    .contenedor_usuario_salir {
+        font-size: 16px;
+    }
+
+    .contenedor_usuario_salir span {
+        display: none;
+    }
+
+    #boton_cerrar {
+        margin-right: 1em;
+    }
+
+    #boton_perfil:hover {
+        border-radius: 50%;
+    }
+
+}
 
 /* BARRA PARA BUSCAR PELICULAS POR CATEGORIA O NOMBRE EN VISTA PRINCIPAL*/
 .barras{
@@ -422,7 +475,7 @@ li a:hover{
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 20px;
 }
 
@@ -476,6 +529,7 @@ select option{
     grid-template-columns: repeat(6, auto);
     gap: 25px;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .imagen_pelicula img{
@@ -563,14 +617,6 @@ select option{
     }
 
 
-    nav{
-        height: 4em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1em;
-    }
-
     .input_registro, .input-tj{
         width: 100%;
         height: 2em;
@@ -635,7 +681,9 @@ select option{
     margin: 40px;
     margin-top: 100px;
     display: flex;
-    gap: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 30px;
 }
 
 
@@ -646,19 +694,25 @@ select option{
 .iframe-boton{
     display: flex;
     flex-direction: column;
+    width: 38%;
+    height: 400px;
 }
 
 
 .iframe-boton button{
-    width: 500px;
-    margin-top: 10px;
+    margin-top: 14px;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    padding: 10px;
 }
 
 iframe{
     border: none;
     border-radius: 10px;
-    width: 500px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
 }
 
 /*ARMADO DE TEMPORADA Y CAPITULOS DE VISTA DE SERIES*/
@@ -678,6 +732,7 @@ iframe{
     border-radius: 10px;
     background-color: transparent;
     outline: none;
+    padding: 2px;
 }
 
 
@@ -687,6 +742,9 @@ iframe{
 
 /*ARMADO DE LA DATA DE PELICULAS Y SERIES*/
 
+.data-pelicula_serie {
+    width: 62%;
+}
 
 .data-pelicula_serie p{
     margin-bottom: 10px;
@@ -722,6 +780,67 @@ hr{
     border: 1px solid #0003;
 }
 
+@media screen and (max-width:900px){
+
+    .seccion-vista {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .iframe-boton {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .data-pelicula_serie {
+        width: 100%;
+    }
+
+    .descripcion{
+        width: 100%;
+    
+    }
+
+    .seleccionador{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+
+  
+}
+
+@media screen and (max-width:1016px){
+
+    .seleccionador{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .seleccionador div{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .seleccionador span{
+        padding: 2px;
+        font-size: 17px;
+     }
+
+     .seleccionador select{
+        margin: 8px;
+        width: 100%;
+        font-size: 14px;
+    }
+  
+}
+
 /*IMAGENES SIMILARES DE PELICULAS Y SERIES*/
 
 .imagenes-sim img{
@@ -742,6 +861,7 @@ hr{
     gap: 25px;
     width: 95%;
     margin: auto;
+    margin-bottom: 30px;
 }
 
 /*BOTON PARA INICIAR SERIE O PELICULA*/

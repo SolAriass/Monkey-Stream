@@ -11,22 +11,29 @@
   </head>
   <body>
     <!-- tenemos la misma barra de navegacion que en el perfil, series, peliculas y la vista principal-->
-    <nav>
-      <ul>
-        <li class="nav">
-          <a href="../vistaPrincipal.html">Home</a>
-        </li>
-        <li class="nav">
-          <a href="../Series.html">Series</a>
-        </li>
-        <li class="nav">
-          <a href="../Peliculas.html">Peliculas</a>
-        </li>
-        <li class="nav">
-          <a href="../vistaperfil.html">Perfil</a>
-        </li>
+    <nav class="menu">
+      <ul class="opciones_menu">
+          <div class="contenedor_peliseries_nav">
+          <li class="nav">
+              <a href="../../pages/vistaPrincipal.html">Home</a>
+          </li>
+          <li class="nav">
+              <button id="Serie">Series</button>
+          </li>
+          <li class="nav">
+              <button id="Pelicula">Peliculas</button>
+          </li>
+          </div>
+          <div class="contenedor_usuario_salir">
+          <li class="nav">
+              <a href="../../pages/vistaperfil.html" id="boton_perfil">👤 Perfil</a>
+          </li>
+          <li class="nav">
+              <a href="../../index.html" id="boton_cerrar">Cerrar sesión</a>
+          </li>
+          </div>
       </ul>
-    </nav>
+  </nav>
 
     <!-- un cuerpo con dos secciones y articulos de por medio para poder acomodar a cada parte de una mejor forma
     hicimos el uso de span para lograr que una sola parte del p tome las propiedades que queriamos para lograr algo
@@ -143,5 +150,7 @@
     <script src="../../scripts/jquery-3.5.1.min.js"></script>
     <script src="../../scripts/slick.min.js"></script>
     <script src="../../scripts/scriptCarrousel.js"></script>
+    <script src="../../scripts/scriptCerrarSesion.js"></script>
+
   </body>
 </html>

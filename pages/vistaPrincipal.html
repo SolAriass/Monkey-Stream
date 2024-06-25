@@ -13,6 +13,7 @@
 
     <nav class="menu">
         <ul class="opciones_menu">
+            <div class="contenedor_peliseries_nav">
             <li class="nav">
                 <a href="vistaPrincipal.html">Home</a>
             </li>
@@ -22,9 +23,15 @@
             <li class="nav">
                 <button id="Pelicula">Peliculas</button>
             </li>
+            </div>
+            <div class="contenedor_usuario_salir">
             <li class="nav">
-                <a href="vistaperfil.html">Perfil</a>
+                <a href="vistaperfil.html" id="boton_perfil">👤<span> Perfil</span></a>
             </li>
+            <li class="nav">
+                <a href="../index.html" id="boton_cerrar">Cerrar<span> sesión</span></a>
+            </li>
+            </div>
         </ul>
     </nav>
 
@@ -72,10 +79,9 @@
 
             
         </section>
-
-
     </main>
 
     <script src="../scripts/scriptVistaPrincipal.js"></script>
+    <script src="../scripts/scriptCerrarSesion.js"></script>
 </body>
 </html>

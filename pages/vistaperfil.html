@@ -8,23 +8,29 @@
     <link rel="icon" href="../assets/images/icono monkey stream.svg">
 </head>
 <body>
-    <nav>
-        <ul>
+    <nav class="menu">
+        <ul class="opciones_menu">
+            <div class="contenedor_peliseries_nav">
             <li class="nav">
                 <a href="vistaPrincipal.html">Home</a>
             </li>
             <li class="nav">
-                <a href="Series.html">Series</a>
+                <button id="Serie">Series</button>
             </li>
             <li class="nav">
-                <a href="Peliculas.html">Peliculas</a>
+                <button id="Pelicula">Peliculas</button>
+            </li>
+            </div>
+            <div class="contenedor_usuario_salir">
+            <li class="nav">
+                <a href="vistaperfil.html" id="boton_perfil">👤<span> Perfil</span></a>
             </li>
             <li class="nav">
-                <a href="vistaperfil.html">Perfil</a>
+                <a href="../index.html" id="boton_cerrar">Cerrar<span> sesión</span></a>
             </li>
+            </div>
         </ul>
     </nav>
-
 
 
     <main class="foto-y-form">
@@ -137,6 +143,8 @@
     </main>
 
     <script src="../scripts/scriptVistaPerfil.js"></script>
+    <script src="../scripts/scriptCerrarSesion.js"></script>
+
 
 </body>  
 
