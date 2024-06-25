@@ -132,9 +132,12 @@ let cargarPeliSeries = document.getElementById("cargarPeliSeries");
 
   for(i in contenidoCompleto){
     cargarPeliSeries.innerHTML += 
-    `<a href="${contenidoCompleto[i].Vinculo}" class="imagen_pelicula">
+    `<article>
+    <a href="${contenidoCompleto[i].Vinculo}" class="imagen_pelicula">
     <img src="${contenidoCompleto[i].Poster}" alt="${contenidoCompleto[i].Titulo}">
-    </a>`
+    </a>
+    </article>
+    `
   }
 
 
@@ -157,9 +160,11 @@ seleccionGenero.addEventListener("change", function(){
 
     for(i in filtrado){
         cargarPeliSeries.innerHTML +=
-        `<a href="${filtrado[i].Vinculo}" class="imagen_pelicula">
+        `<article>
+        <a href="${filtrado[i].Vinculo}" class="imagen_pelicula">
         <img src="${filtrado[i].Poster}" alt="${filtrado[i].Titulo}">
-        </a>` 
+        </a>
+        </article>` 
     }
 
 })

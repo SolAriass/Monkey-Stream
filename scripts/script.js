@@ -17,7 +17,11 @@ function validacionFormulario(){
     document.getElementById("errorNombre").innerHTML = "";
     document.getElementById("errorContaseña").innerHTML = "";
 
-    if(localStorage.getItem('nombreUsuario') === null && localStorage.getItem('contraseña') === null){ 
+    if(localStorage.getItem('nombreUsuario') === null || localStorage.getItem('contraseña') === null){ 
+        document.getElementById("errorContaseña").innerHTML = "<p> Usted no esta registrado </p>";
+    }
+
+    if(localStorage.getItem('nombreUsuario') !== nombre || localStorage.getItem('contraseña') !== password){
         document.getElementById("errorContaseña").innerHTML = "<p> Usted no esta registrado </p>";
     }
     

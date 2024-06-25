@@ -15,6 +15,7 @@
 body{
     background-color: #edbdc9;
     font-family: 'Montserrat';
+    color: rgb(61, 57, 57) !important;
 }
 
 /* Primera vista - inicio sesion */
@@ -163,6 +164,13 @@ body{
 
     .vinculo{
         font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width:360px){
+
+    .contenedor_formulario{
+        margin-top: 60px;
     }
 }
 
@@ -648,6 +656,73 @@ select option{
     border-radius: 10px;
 
 }
+
+/* Celulares */
+
+@media screen and (max-width:580px){
+    .imagenes{
+       display: flex;
+       flex-wrap: wrap;
+       
+    }
+
+    .barras{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+    }
+    
+    .barras div{
+        margin-top: 3%;
+        width: 100%;
+    }
+
+
+    .barras article{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .barras select{
+        width: 100%;
+    }
+
+
+    .box-svg input{
+        width: 100%;
+        padding: 0.5em;
+    }
+
+    .busqueda::placeholder{
+        padding-left: 20px;
+        font-size: 1.1em;
+    }
+
+    .box-svg img{
+        padding-top: 2px;
+    }
+
+
+
+}
+
+/* Tablet */ 
+@media screen and (max-width:1150px){
+    .imagenes{
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+     }
+
+
+}
+
+
+
+
+
 
 /************************************************************/
 /* Quinta Vista - Perfil */
