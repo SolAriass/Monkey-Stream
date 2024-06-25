@@ -427,12 +427,12 @@ QUE EL DE INICIAR SESIÓN*/
     }
 
     .registro{
-        font-size: 12px;
+        font-size: 16px;
         text-align: center;
     }
 
     .input_registro::placeholder, .input-pago::placeholder{
-        font-size: 10px;
+        font-size: 14px;
         text-align: center;
     }
 
