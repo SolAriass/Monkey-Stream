@@ -505,17 +505,19 @@ ul{
     flex-direction: row;
     justify-content: space-around;
     align-items: baseline;
-    padding: 0;
+    padding: 10px;
+    margin: 0px;
 }
 
 li{
     list-style: none;
-    padding: 8px;
 }
 
 li a, li button{
     padding: 10px;
+    display: block;
 }
+
 
 .contenedor_peliseries_nav button{
     border: none;
