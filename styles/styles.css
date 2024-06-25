@@ -560,10 +560,6 @@ li a, li button{
 
 @media screen and (max-width:600px){
 
-    .contenedor_peliseries_nav {
-        font-size: 14px;
-    }
-
     .contenedor_usuario_salir {
         font-size: 16px;
     }
