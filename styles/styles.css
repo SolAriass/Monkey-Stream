@@ -382,7 +382,7 @@ QUE EL DE INICIAR SESIÓN*/
         font-size: 16px;
         text-align: center;
     }
-    main{
+    .registro {
         font-size: 21px;
         text-align: center;
     }
@@ -418,7 +418,7 @@ QUE EL DE INICIAR SESIÓN*/
         padding: 10px 0px 10px 0px;
     }
 
-    main{
+    .registro{
         font-size: 12px;
         text-align: center;
     }
@@ -716,7 +716,7 @@ select option{
 @media screen and (max-width:1100px){
     .foto-y-form{
         flex-direction: column;
-
+        text-align: center;
     }
 
     .cajita-perfil{
@@ -732,6 +732,7 @@ select option{
         align-items: center;
         width: 100%;
         margin: 0;
+        text-align: center;
     }
 
 
@@ -880,7 +881,7 @@ hr{
   
 }
 
-@media screen and (max-width:1016px){
+@media screen and (max-width:1026px){
 
     .seleccionador{
         display: flex;
