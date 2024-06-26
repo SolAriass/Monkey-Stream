@@ -4,6 +4,7 @@
 
 > [!IMPORTANT]
 > **INICIO DE SESION:** Porfavor primero deberan registrarse y colocar de forma correcta su usuario y contraseña para poder acceder.
+
 > **TEMA FILTRO:** Los tuvimos que hacer botones ya que no nos tomaba el evento "click" en los a (Serie y Pelicula). Lo que realizamos fue que tanto Serie y Pelicula en la vista Perfil o 
 > las mencionadas (Vista de Pelicula o Serie) nos envien a la vista principal y que ella se encargue de filtrar al presionar Serie/Pelicula.
 
